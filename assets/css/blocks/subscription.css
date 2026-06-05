@@ -93,7 +93,7 @@
                 content: '';
                 transform: translateY(-50%);
 
-                background: url('/images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+                background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
             }
         }
 
