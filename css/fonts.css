@@ -8,9 +8,9 @@
     font-style: normal;
 
     font-display: swap;
-    src: url('/fonts/PTRootUI-Regular.woff2') format('woff2'),
-    url('/fonts/PTRootUI-Regular.woff') format('woff'),
-    url('/fonts/PTRootUI-Regular.ttf') format('truetype');
+    src: url('../fonts/PTRootUI-Regular.woff2') format('woff2'),
+    url('../fonts/PTRootUI-Regular.woff') format('woff'),
+    url('../fonts/PTRootUI-Regular.ttf') format('truetype');
 }
 
 
@@ -21,9 +21,9 @@
     font-style: normal;
 
     font-display: swap;
-    src: url('/fonts/PTRootUI-Medium.woff2') format('woff2'),
-    url('/fonts/PTRootUI-Medium.woff') format('woff'),
-    url('/fonts/PTRootUI-Medium.ttf') format('truetype');
+    src: url('../fonts/PTRootUI-Medium.woff2') format('woff2'),
+    url('../fonts/PTRootUI-Medium.woff') format('woff'),
+    url('../fonts/PTRootUI-Medium.ttf') format('truetype');
 }
 
 
@@ -34,7 +34,7 @@
     font-style: normal;
 
     font-display: swap;
-    src: url('/fonts/PTRootUI-Bold.woff2') format('woff2'),
-    url('/fonts/PTRootUI-Bold.woff') format('woff'),
-    url('/fonts/PTRootUI-Bold.ttf') format('truetype');
+    src: url('../fonts/PTRootUI-Bold.woff2') format('woff2'),
+    url('../fonts/PTRootUI-Bold.woff') format('woff'),
+    url('../fonts/PTRootUI-Bold.ttf') format('truetype');
 }
