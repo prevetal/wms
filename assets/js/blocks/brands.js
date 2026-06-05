@@ -31,27 +31,3 @@
     // Регистрируем наш блок в системе ядра
     registerInit(initBrands)
 })()
-
-
-
-// // Brands slider
-// const brandsSliders = [],
-//     brands = document.querySelectorAll('.brands .swiper')
-
-// brands.forEach((el, i) => {
-//     el.classList.add('brands_s' + i)
-
-//     let options = {
-//         loop: true,
-//         speed: 500,
-//         autoplay: {
-//             delay: 1000,
-//             disableOnInteraction: true,
-//         },
-//         allowTouchMove: false,
-//         spaceBetween: getCssVar(el, '--spaceBetween'),
-//         slidesPerView: getCssVar(el, '--slidesPerView'),
-//     }
-
-//     brandsSliders.push(new Swiper('.brands_s' + i, options))
-// })
