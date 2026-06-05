@@ -1,0 +1,91 @@
+/*------------
+    Stages
+------------*/
+.stages
+{
+    .block_head
+    {
+        .desc
+        {
+            width: 449px;
+            max-width: 100%;
+        }
+    }
+
+
+    .grid
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+
+        width: 295px;
+        max-width: 100%;
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xxs);
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 40px;
+            margin-bottom: var(--inner_gap_xxs);
+
+            border-radius: var(--border_radius_xs);
+            background: var(--gradient_primary);
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+    }
+
+
+    .image
+    {
+        display: block;
+
+
+        img
+        {
+            display: block;
+
+            height: 872px;
+        }
+    }
+}

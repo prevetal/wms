@@ -1,0 +1,149 @@
+/*-------------
+    Reviews
+-------------*/
+.reviews
+{
+    .swiper
+    {
+        overflow: visible;
+
+        --spaceBetween: var(--inner_gap);
+        --slidesPerView: auto;
+
+
+        &:not(.swiper-initialized)
+        {
+            .swiper-wrapper
+            {
+                gap: var(--spaceBetween);
+            }
+
+
+            .swiper-slide
+            {
+                width: auto;
+            }
+        }
+
+
+        .swiper-slide
+        {
+            width: 342px;
+        }
+    }
+
+
+    .top
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-bottom: var(--block_padding_l);
+
+
+        .block_head
+        {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .review
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xs);
+
+        padding: var(--block_padding_s);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .text
+        {
+            margin-bottom: var(--inner_gap_xs);
+
+            font-weight: 500;
+        }
+
+
+        .author
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_xxs);
+
+
+            .photo
+            {
+                display: block;
+
+                width: 38px;
+
+                border-radius: var(--border_radius_xs);
+                background: var(--bg_grey);
+
+                aspect-ratio: 1 / 1;
+
+
+                & + *
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                    width: calc(100% - 38px - var(--inner_gap_xxs));
+                }
+            }
+
+
+            .name
+            {
+                font-weight: 500;
+            }
+
+
+            .post
+            {
+                font-size: var(--font_size_s);
+            }
+        }
+
+
+        .duration
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 5px;
+
+            font-size: var(--font_size_xs);
+
+            color: var(--grey_color);
+
+
+            .icon
+            {
+                display: block;
+
+                width: 16px;
+                height: 15px;
+            }
+
+
+            span
+            {
+                width: calc(100% - 21px);
+            }
+        }
+    }
+}

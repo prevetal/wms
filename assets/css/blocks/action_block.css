@@ -1,0 +1,103 @@
+/*------------------
+    Action block
+------------------*/
+.action_block
+{
+    .data
+    {
+        position: relative;
+
+        overflow: hidden;
+
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--block_padding_xl);
+
+        color: var(--light_color);
+        border-radius: var(--border_radius);
+        background: var(--primary_color);
+
+
+        & > *
+        {
+            position: relative;
+
+            z-index: 3;
+        }
+    }
+
+
+    .block_head
+    {
+        width: 422px;
+        max-width: 100%;
+        margin-bottom: 0;
+
+
+        .desc
+        {
+            color: currentColor;
+        }
+    }
+
+
+    .btn
+    {
+        width: 297px;
+        max-width: 100%;
+        height: 49px;
+        margin-top: var(--inner_gap);
+        padding-inline: var(--inner_gap_xl);
+
+        color: var(--dark_color);
+        border-radius: var(--border_radius_s);
+        background: var(--light_color);
+    }
+
+
+    .image
+    {
+        position: absolute;
+        right: var(--block_padding_xl);
+        bottom: 0;
+
+        display: flex;
+        align-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        width: 542px;
+        max-width: 100%;
+        height: 100%;
+
+        z-index: 2;
+        pointer-events: none;
+
+
+        img
+        {
+            display: block;
+
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+
+    .bg
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 1001px;
+        max-width: 100%;
+        height: 310px;
+        max-height: 100%;
+
+        z-index: 1;
+        pointer-events: none;
+    }
+}

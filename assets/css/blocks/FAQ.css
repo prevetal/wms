@@ -1,0 +1,144 @@
+/*---------
+    FAQ
+---------*/
+.FAQ
+{
+    .cont
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .info
+    {
+        width: 488px;
+        max-width: 100%;
+
+
+        .block_head
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .btns
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_xl);
+
+
+            .btn
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--inner_gap_xxs);
+
+                height: 54px;
+                padding-inline: var(--inner_gap_xl);
+
+                color: var(--light_color);
+                border-radius: var(--border_radius_s);
+                background: var(--primary_color);
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 24px;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .socials
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_xxs);
+
+
+            a
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 54px;
+
+                text-decoration: none;
+
+                color: var(--primary_color);
+                border: 1px solid;
+                border-radius: var(--border_radius_xs);
+
+                aspect-ratio: 1 / 1;
+
+
+                .icon
+                {
+                    display: block;
+                }
+
+
+                &.tg_link
+                {
+                    .icon
+                    {
+                        width: 22px;
+                        height: 18px;
+                    }
+                }
+
+
+                &.vk_link
+                {
+                    .icon
+                    {
+                        width: 26px;
+                        height: 14px;
+                    }
+                }
+
+
+                &.max_link
+                {
+                    .icon
+                    {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .accordion
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xs);
+
+        width: 628px;
+        max-width: 100%;
+    }
+}

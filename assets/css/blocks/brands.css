@@ -1,0 +1,109 @@
+/*------------
+    Brands
+------------*/
+.brands
+{
+    .cont
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .block_head
+    {
+        width: 176px;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+
+    .swiper
+    {
+        width: calc(100% - 220px);
+        margin: 0;
+
+        --spaceBetween: var(--block_padding_xl);
+        --slidesPerView: auto;
+
+
+        &:before,
+        &:after
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: block;
+
+            width: 100px;
+            height: 100%;
+
+            content: '';
+            z-index: 3;
+            pointer-events: none;
+
+            background: linear-gradient(to right, var(--bg), transparent);
+        }
+
+
+        &:after
+        {
+            right: 0;
+            left: auto;
+
+            transform: scale(-1 , 1);
+        }
+
+
+        &:not(.swiper-initialized)
+        {
+            .swiper-wrapper
+            {
+                gap: var(--spaceBetween);
+            }
+
+
+            .swiper-slide
+            {
+                width: auto;
+            }
+        }
+
+
+        .swiper-wrapper
+        {
+            --swiper-wrapper-transition-timing-function: linear;
+        }
+
+
+        .swiper-slide
+        {
+            width: auto;
+        }
+    }
+
+
+    .logo
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        height: 60px;
+
+
+        img
+        {
+            display: block;
+
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

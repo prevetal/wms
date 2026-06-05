@@ -1,0 +1,254 @@
+/*-----------------
+    first_section
+-----------------*/
+.first_section
+{
+    .cont
+    {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_l);
+
+        width: calc(50% - var(--inner_gap_xl) / 2);
+        padding-block: 46px var(--block_padding);
+        padding-inline: var(--block_padding);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .title
+        {
+            font-size: var(--font_size_title);
+            font-weight: 700;
+
+
+            span
+            {
+                color: var(--primary_color);
+            }
+        }
+
+
+        .desc
+        {
+            width: 500px;
+            max-width: 100%;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+
+            color: var(--grey_color);
+        }
+
+
+        .btns
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_s);
+
+            margin-top: var(--inner_gap_s);
+
+
+            .btn
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--inner_gap_xxs);
+
+                height: 54px;
+                padding-inline: var(--inner_gap_l) var(--inner_gap_xl);
+
+                border-radius: var(--border_radius_s);
+                background: var(--light_color);
+
+
+                &.primary
+                {
+                    color: var(--light_color);
+                    background: var(--primary_color);
+                }
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 24px;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+
+
+            .economy
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--inner_gap_xxs);
+
+                margin-top: var(--inner_gap_s);
+
+                font-size: var(--font_size_s);
+
+                color: var(--primary_color);
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 18px;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+
+        .platforms
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_s);
+
+            width: fit-content;
+            margin-top: auto;
+            padding-top: var(--inner_gap_s);
+
+
+            .label
+            {
+                width: 100%;
+
+                color: var(--grey_color);
+            }
+
+
+            .logos
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+
+
+                .logo
+                {
+                    position: relative;
+
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    width: 54px;
+                    padding: 4px;
+
+                    border: 1px solid var(--secondary_color);
+                    border-radius: 50%;
+                    background: var(--light_color);
+
+                    aspect-ratio: 1 / 1;
+
+
+                    img
+                    {
+                        display: block;
+
+                        width: 25px;
+
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+
+
+                .logo + .logo
+                {
+                    margin-right: calc(var(--inner_gap_xs) * -1);
+                }
+            }
+
+
+            .honest_sign
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_s);
+
+                height: 54px;
+                margin-left: var(--inner_gap_s);
+                padding-inline: var(--inner_gap_s);
+
+                font-size: var(--font_size_xs);
+
+                color: var(--grey_color);
+                border-radius: var(--border_radius_max);
+                background: var(--light_color);
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 20px;
+
+                    color: var(--primary_color);
+
+                    aspect-ratio: 1 / 1;
+                }
+
+
+                span
+                {
+                    width: 204px;
+                    max-width: calc(100% - 20px - var(--inner_gap_s));
+                }
+            }
+        }
+    }
+
+
+    .image
+    {
+        position: relative;
+
+        display: block;
+        overflow: hidden;
+
+        width: calc(50% - var(--inner_gap_xl) / 2);
+
+        border-radius: var(--border_radius);
+        background: var(--primary_color);
+    }
+}
