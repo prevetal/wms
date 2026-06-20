@@ -29,7 +29,7 @@
 		<link rel="stylesheet" href="css/swiper.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="assets/css/blocks/page_head.css">
-		<link rel="stylesheet" href="assets/css/blocks/persons.css">
+		<link rel="stylesheet" href="assets/css/blocks/person_info.css">
 		<link rel="stylesheet" href="assets/css/blocks/articles.css">
 		<link rel="stylesheet" href="css/fonts.css">
 	</head>
@@ -106,165 +106,48 @@
 				</header>
 
 
-				<section class="page_head">
+				<section class="person_info block">
 					<div class="cont">
-						<h1 class="title">Наша редакция и <span class="text_gradient">эксперты</span></h1>
+						<picture class="photo">
+							<source srcset="images/tmp/person_info_photo.jpg 1x, images/tmp/person_info_photo@2x.jpg 2x">
 
-						<div class="desc">Познакомьтесь с командой экспертов в области<br> складской логистики и автоматизации</div>
+							<img src="images/tmp/person_info_photo.jpg" alt="" fetchpriority="high" class="cover">
+						</picture>
+
+						<div class="data">
+							<div class="name">Александр Волков</div>
+
+							<div class="post">Главный редактор</div>
+
+							<div class="items">
+								<div>Александр специализируется на внедрении современных систем управления складом. За свою карьеру он успешно реализовал более 50 проектов по автоматизации для крупнейших ритейлеров и логистических операторов.</div>
+
+								<div>Имеет 12 лет опыта в автоматизации складов и оптимизации цепочек поставок. В своем блоге он делится практическими советами по оптимизации складских процессов, разбором кейсов импортозамещения ПО и обзорами новых технологий в сфере WMS.</div>
+							</div>
+
+							<div class="btns">
+								<button class="btn">
+									<span>Связаться с автором</span>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+								</button>
+
+								<div class="socials">
+									<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
+									</a>
+
+									<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<picture class="bg">
 						<img src="images/bg_page_head.svg" alt="" loading="lazy">
 					</picture>
-				</section>
-
-
-				<section class="persons block">
-					<div class="cont">
-						<div class="grid_row">
-							<div class="item">
-								<picture class="photo">
-									<source srcset="images/tmp/persons_photo1.jpg 1x, images/tmp/persons_photo1@2x.jpg 2x">
-
-									<img src="images/tmp/persons_photo1.jpg" alt="" loading="lazy" class="cover">
-								</picture>
-
-								<div class="info">
-									<div class="top">
-										<div>
-											<div class="name">Александр Петров</div>
-
-											<div class="post">Главный редактор</div>
-										</div>
-
-										<div class="socials">
-											<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
-											</a>
-
-											<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
-											</a>
-										</div>
-									</div>
-
-									<div class="divider"></div>
-
-									<div class="desc">10 лет опыта в автоматизации складов. Автор методик по внедрению систем учета.</div>
-								</div>
-							</div>
-
-							<div class="item">
-								<picture class="photo">
-									<source srcset="images/tmp/persons_photo2.jpg 1x, images/tmp/persons_photo2@2x.jpg 2x">
-
-									<img src="images/tmp/persons_photo2.jpg" alt="" loading="lazy" class="cover">
-								</picture>
-
-								<div class="info">
-									<div class="top">
-										<div>
-											<div class="name">Мария Иванова</div>
-
-											<div class="post">Эксперт по WMS</div>
-										</div>
-
-										<div class="socials">
-											<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
-											</a>
-
-											<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
-											</a>
-										</div>
-									</div>
-
-									<div class="divider"></div>
-
-									<div class="desc">Специалист по внедрению ERP и WMS систем. Консультант крупных ритейл-сетей.</div>
-								</div>
-							</div>
-
-							<div class="item">
-								<picture class="photo">
-									<source srcset="images/tmp/persons_photo3.jpg 1x, images/tmp/persons_photo3@2x.jpg 2x">
-
-									<img src="images/tmp/persons_photo3.jpg" alt="" loading="lazy" class="cover">
-								</picture>
-
-								<div class="info">
-									<div class="top">
-										<div>
-											<div class="name">Дмитрий Соколов</div>
-
-											<div class="post">Аналитик логистики</div>
-										</div>
-
-										<div class="socials">
-											<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
-											</a>
-
-											<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
-											</a>
-										</div>
-									</div>
-
-									<div class="divider"></div>
-
-									<div class="desc">Эксперт по оптимизации складских процессов и топологии склада.</div>
-								</div>
-							</div>
-
-							<div class="item">
-								<picture class="photo">
-									<source srcset="images/tmp/persons_photo4.jpg 1x, images/tmp/persons_photo4@2x.jpg 2x">
-
-									<img src="images/tmp/persons_photo4.jpg" alt="" loading="lazy" class="cover">
-								</picture>
-
-								<div class="info">
-									<div class="top">
-										<div>
-											<div class="name">Елена Кузнецова</div>
-
-											<div class="post">Технический писатель</div>
-										</div>
-
-										<div class="socials">
-											<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
-											</a>
-
-											<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
-											</a>
-										</div>
-									</div>
-
-									<div class="divider"></div>
-
-									<div class="desc">Автор более 50 статей о логистике и обзоров современного оборудования.</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="join">
-							<div class="block_head">
-								<div class="title size_s">Хотите стать нашим экспертом?</div>
-
-								<div class="desc">Свяжитесь с нами, чтобы обсудить сотрудничество и публикации.</div>
-							</div>
-
-							<button class="btn">Связаться с нами</button>
-
-							<picture class="bg">
-								<img src="images/bg_persons_join.svg" alt="" loading="lazy">
-							</picture>
-						</div>
-					</div>
 				</section>
 
 
@@ -276,7 +159,7 @@
 									<img src="images/tmp/ic_block_head_title3.svg" alt="" loading="lazy">
 								</picture>
 
-								<span>Наши лучшие статьи</span>
+								<span>Статьи автора</span>
 							</div>
 
 							<a href="/" class="all_link">

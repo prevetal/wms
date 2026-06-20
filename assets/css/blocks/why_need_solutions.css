@@ -1,8 +1,23 @@
-/*-----------
-    Steps
------------*/
-.steps
+/*------------------------
+    Why need solutions
+------------------------*/
+.why_need_solutions
 {
+    .block_head
+    {
+        .title
+        {
+            width: 508px;
+        }
+
+
+        .desc
+        {
+            width: 472px;
+        }
+    }
+
+
     .grid_row
     {
         --gap_x: var(--block_padding_s);
@@ -33,25 +48,6 @@
             position: relative;
 
             z-index: 3;
-        }
-
-
-        &.primary
-        {
-            color: var(--light_color);
-            background: var(--gradient_primary);
-
-
-            .desc
-            {
-                color: var(--light_color);
-
-
-                &:before
-                {
-                    background-image: url('../../../images/ic_list_marker_white.svg');
-                }
-            }
         }
 
 
@@ -104,18 +100,6 @@
 
             z-index: 1;
             pointer-events: none;
-
-
-            &.bottom_pad
-            {
-                padding-bottom: var(--block_padding_s);
-            }
-
-
-            &.alignend
-            {
-                justify-content: flex-end;
-            }
 
 
             img

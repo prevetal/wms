@@ -1,8 +1,29 @@
-/*-----------
-    Steps
------------*/
-.steps
+/*----------------
+    Industries
+----------------*/
+.industries
 {
+    .block_head
+    {
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            width: 552px;
+
+
+            img
+            {
+                display: block;
+
+                height: 40px;
+            }
+        }
+    }
+
+
     .grid_row
     {
         --gap_x: var(--block_padding_s);
@@ -19,13 +40,16 @@
         flex-direction: column;
         gap: var(--inner_gap);
 
-        padding-block: var(--block_padding);
+        min-height: 250px;
+        padding-block: var(--block_padding) var(--block_padding_s);
         padding-inline: var(--block_padding_s);
 
+        transition: .2s linear;
+        text-decoration: none;
+
+        color: currentColor;
         border-radius: var(--border_radius);
         background: var(--bg_grey);
-
-        aspect-ratio: 1 / 1;
 
 
         & > &
@@ -33,25 +57,6 @@
             position: relative;
 
             z-index: 3;
-        }
-
-
-        &.primary
-        {
-            color: var(--light_color);
-            background: var(--gradient_primary);
-
-
-            .desc
-            {
-                color: var(--light_color);
-
-
-                &:before
-                {
-                    background-image: url('../../../images/ic_list_marker_white.svg');
-                }
-            }
         }
 
 
@@ -88,42 +93,34 @@
         }
 
 
-        .thumb
+        .btn
         {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
             display: flex;
-            align-content: flex-end;
-            align-items: flex-end;
+            align-content: center;
+            align-items: center;
             flex-wrap: wrap;
             justify-content: center;
 
-            width: 100%;
+            width: fit-content;
+            height: 42px;
+            margin-top: auto;
+            padding-inline: var(--inner_gap_xl);
 
-            z-index: 1;
-            pointer-events: none;
+            transition: .2s linear;
+            text-align: center;
+
+            color: var(--primary_color);
+            border: 1px solid var(--primary_color);
+            border-radius: var(--border_radius_s);
+        }
 
 
-            &.bottom_pad
+        &:hover
+        {
+            .btn
             {
-                padding-bottom: var(--block_padding_s);
-            }
-
-
-            &.alignend
-            {
-                justify-content: flex-end;
-            }
-
-
-            img
-            {
-                display: block;
-
-                max-width: 100%;
-                max-height: 100%;
+                color: var(--light_color);
+                background: var(--primary_color);
             }
         }
     }
