@@ -1,0 +1,240 @@
+/*-------------
+    Persons
+-------------*/
+.persons
+{
+    .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
+    }
+
+
+    .item
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--block_padding_s);
+
+        padding: var(--inner_gap_s);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .photo
+        {
+            display: block;
+
+            border-radius: 20px;
+            background: var(--bg_grey);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_l);
+
+            width: calc(100% - 179px - var(--block_padding_s));
+        }
+
+
+        .top
+        {
+            display: flex;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+
+
+        .post
+        {
+            margin-top: var(--inner_gap_xxxs);
+        }
+
+
+        .socials
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: var(--inner_gap_xxxs);
+
+
+            a
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 40px;
+
+                text-decoration: none;
+
+                color: var(--primary_color);
+                border: 1px solid;
+                border-radius: 8px;
+
+                aspect-ratio: 1 / 1;
+
+
+                .icon
+                {
+                    display: block;
+                }
+
+
+                &.tg_link
+                {
+                    .icon
+                    {
+                        width: 17px;
+                        height: 14px;
+                    }
+                }
+
+
+                &.vk_link
+                {
+                    .icon
+                    {
+                        width: 20px;
+                        height: 11px;
+                    }
+                }
+            }
+        }
+
+
+        .divider
+        {
+            width: 100%;
+            height: 1px;
+
+            background: #e1e3ea;
+        }
+
+
+        .desc
+        {
+            position: relative;
+
+            padding-left: var(--inner_gap_s);
+
+
+            &:before
+            {
+                position: absolute;
+                top: .5lh;
+                left: 0;
+
+                display: block;
+
+                width: 7px;
+                height: 9px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+            }
+        }
+    }
+
+
+    .join
+    {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--inner_gap_xl);
+        padding: var(--block_padding_s);
+
+        color: var(--light_color);
+        border-radius: var(--border_radius);
+        background: var(--primary_color);
+
+
+        & > *
+        {
+            position: relative;
+
+            z-index: 3;
+        }
+
+
+        .block_head
+        {
+            gap: var(--inner_gap_xxxs);
+
+            margin: 0;
+
+
+            .desc
+            {
+                color: currentColor;
+            }
+        }
+
+
+        .btn
+        {
+            height: 54px;
+            padding-inline: var(--inner_gap_xl);
+
+            color: var(--dark_color);
+            border-radius: var(--border_radius_s);
+            background: var(--light_color);
+        }
+
+
+        .bg
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: block;
+
+            height: 100%;
+
+            z-index: 1;
+            pointer-events: none;
+
+
+            img
+            {
+                display: block;
+
+                height: 100%;
+            }
+        }
+    }
+}

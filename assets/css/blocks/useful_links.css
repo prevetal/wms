@@ -1,0 +1,64 @@
+/*------------------
+    Useful links
+------------------*/
+.useful_links
+{
+    .title
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap_xxs);
+
+        margin-bottom: var(--inner_gap_xl);
+
+        font-size: var(--font_size_title_s);
+        font-weight: 700;
+
+
+        .icon
+        {
+            display: block;
+
+            width: 24px;
+
+            color: var(--primary_color);
+
+            aspect-ratio: 1 / 1;
+        }
+
+
+        span
+        {
+            width: calc(100% - 24px - var(--inner_gap_xxs));
+        }
+    }
+
+
+    .items
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--inner_gap_xxs);
+
+
+        a
+        {
+            display: block;
+
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: var(--inner_gap_xl);
+
+            text-decoration: none;
+
+            color: currentColor;
+            border-radius: var(--border_radius_s);
+            background: var(--bg_grey);
+        }
+    }
+}

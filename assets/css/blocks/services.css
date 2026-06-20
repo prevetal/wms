@@ -1,0 +1,206 @@
+/*--------------
+    Services
+--------------*/
+.services
+{
+    .block_head
+    {
+        align-content: center;
+        align-items: center;
+
+
+        .title
+        {
+            width: 640px;
+        }
+
+
+        .desc
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+
+            width: 532px;
+
+
+            img
+            {
+                display: block;
+
+                height: 40px;
+            }
+        }
+    }
+
+
+    .grid_row
+    {
+        --gap_x: var(--block_padding_s);
+        --gap_y: var(--block_padding_s);
+    }
+
+
+    .service
+    {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        min-height: 318px;
+        padding-block: var(--block_padding) var(--block_padding_s);
+        padding-inline: var(--block_padding_s);
+
+        transition: .2s linear;
+        text-decoration: none;
+
+        color: currentColor;
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        &.l_w
+        {
+            --width_multiplier: 2;
+        }
+
+
+        &.primary
+        {
+            color: var(--light_color);
+            background: var(--gradient_primary);
+
+
+            .desc
+            {
+                &:before
+                {
+                    background-image: url('../../../images/ic_list_marker_white.svg');
+                }
+            }
+
+
+            .btn
+            {
+                color: var(--light_color);
+                border-color: var(--light_color);
+            }
+        }
+
+
+        & > &
+        {
+            position: relative;
+
+            z-index: 3;
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+
+
+        .desc
+        {
+            position: relative;
+
+            padding-left: var(--inner_gap_s);
+
+
+            &:before
+            {
+                position: absolute;
+                top: .5lh;
+                left: 0;
+
+                display: block;
+
+                width: 7px;
+                height: 9px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+            }
+        }
+
+
+        .btn
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: fit-content;
+            height: 42px;
+            margin-top: auto;
+            padding-inline: var(--inner_gap_xl);
+
+            transition: .2s linear;
+            text-align: center;
+
+            color: var(--primary_color);
+            border: 1px solid var(--primary_color);
+            border-radius: var(--border_radius_s);
+        }
+
+
+        .thumb
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            display: flex;
+            align-content: flex-end;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            max-width: 100%;
+            max-height: 100%;
+
+            z-index: 1;
+            pointer-events: none;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        &:hover
+        {
+            .btn
+            {
+                color: var(--light_color);
+                background: var(--primary_color);
+            }
+
+
+            &.primary
+            {
+                .btn
+                {
+                    color: var(--primary_color);
+                    border-color: var(--light_color);
+                    background: var(--light_color);
+                }
+            }
+        }
+    }
+}

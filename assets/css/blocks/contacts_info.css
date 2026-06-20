@@ -1,0 +1,143 @@
+/*-------------------
+    Contacts info
+-------------------*/
+.contacts_info
+{
+    .cont
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+    }
+
+
+    .data
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block_padding_s);
+
+        width: calc(50% - var(--inner_gap_xl));
+
+
+        .title
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+
+
+        .map
+        {
+            position: relative;
+
+            overflow: hidden;
+
+            height: 267px;
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+        }
+
+
+        .items
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap);
+        }
+
+
+        .item
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_s);
+
+
+            .icon
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                width: 40px;
+
+                color: var(--light_color);
+                border-radius: var(--border_radius_xs);
+                background: var(--gradient_primary);
+
+                aspect-ratio: 1 / 1;
+
+
+                svg
+                {
+                    display: block;
+
+                    width: 26px;
+
+                    aspect-ratio: 1 / 1;
+                }
+
+
+                & + *
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                    width: calc(100% - 40px - var(--inner_gap_s));
+                }
+            }
+
+
+            .label
+            {
+                color: var(--grey_color);
+            }
+
+
+            .val
+            {
+                font-size: var(--font_size_l);
+                font-weight: 500;
+
+
+                a
+                {
+                    white-space: nowrap;
+                    text-decoration: none;
+
+                    color: currentColor;
+                }
+            }
+        }
+    }
+
+
+    .form
+    {
+        width: calc(50% - var(--inner_gap_xl));
+        padding: var(--block_padding_s);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .title
+        {
+            margin-bottom: var(--inner_gap);
+
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+    }
+}

@@ -8,7 +8,18 @@
         .desc
         {
             width: 449px;
-            max-width: 100%;
+
+
+            &.l_w
+            {
+                width: 540px;
+            }
+
+
+            &.xl_w
+            {
+                width: 680px;
+            }
         }
     }
 

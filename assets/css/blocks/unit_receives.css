@@ -1,0 +1,139 @@
+/*-------------------
+    Unit receives
+-------------------*/
+.unit_receives
+{
+    .block_head
+    {
+        .desc
+        {
+            margin-bottom: var(--inner_gap);
+        }
+    }
+
+
+    .grid_row
+    {
+        --items_per_line: 4;
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
+    }
+
+
+    .item
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap);
+
+        min-height: 306px;
+        padding: var(--block_padding_s);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .icon
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 40px;
+
+            aspect-ratio: 1 / 1;
+
+
+            img
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+
+
+        .desc
+        {
+            margin-top: auto;
+            padding-top: var(--inner_gap);
+        }
+    }
+
+
+    .bottom
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: var(--inner_gap_xl);
+        padding: var(--block_padding_s);
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .managers
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+
+            .photo
+            {
+                display: block;
+
+                width: 54px;
+
+                border: 2px solid var(--light_color);
+                border-radius: 50%;
+                background: var(--light_color);
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            .photo + .photo
+            {
+                margin-left: calc(var(--inner_gap_xs) * -1);
+            }
+
+
+            span
+            {
+                display: block;
+
+                width: 300px;
+                max-width: 100%;
+                margin-left: var(--inner_gap);
+            }
+        }
+
+
+        .btn
+        {
+            height: 54px;
+            padding-inline: var(--inner_gap_xl);
+
+            color: var(--light_color);
+            border-radius: var(--border_radius_s);
+            background: var(--primary_color);
+        }
+    }
+}
