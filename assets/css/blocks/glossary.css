@@ -3,6 +3,12 @@
 --------------*/
 .glossary
 {
+    &.width50
+    {
+        width: calc(50% - var(--inner_gap_xl) / 2);
+    }
+
+
     .head
     {
         display: flex;
@@ -13,12 +19,12 @@
         gap: var(--block_padding);
 
         margin-bottom: var(--block_head_offset);
-    }
 
 
-    .block_head
-    {
-        margin: 0;
+        .block_head
+        {
+            margin: 0;
+        }
     }
 
 
@@ -31,7 +37,7 @@
 
         --form_border_color: var(--bg_grey);
         --form_border_color_focus: var(--bg_grey);
-        --form_border_radius: var(--border_radius_s);
+        --form_border_radius: var(--border_radius_xs);
         --form_bg_color: var(--bg_grey);
         --form_placeholder_color: var(--grey_color);
         --form_input_height: 49px;
@@ -131,6 +137,12 @@
             --items_per_line: 2;
             --gap_x: var(--inner_gap_xl);
             --gap_y: var(--inner_gap_s);
+
+
+            .width50 &
+            {
+                --items_per_line: 1;
+            }
         }
     }
 
@@ -225,7 +237,7 @@
 
             color: var(--primary_color);
             border: 1px solid var(--primary_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
 
 
             &:hover

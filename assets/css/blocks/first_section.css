@@ -77,7 +77,7 @@
                 height: 54px;
                 padding-inline: var(--inner_gap_l) var(--inner_gap_xl);
 
-                border-radius: var(--border_radius_s);
+                border-radius: var(--border_radius_xs);
                 background: var(--light_color);
 
 

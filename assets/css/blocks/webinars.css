@@ -3,6 +3,12 @@
 --------------*/
 .webinars
 {
+    &.width50
+    {
+        width: calc(50% - var(--inner_gap_xl) / 2);
+    }
+
+
     .grid_row
     {
         --gap_x: var(--inner_gap_xl);
@@ -14,6 +20,12 @@
             --items_per_line: 2;
             --gap_x: var(--inner_gap_xl);
             --gap_y: var(--inner_gap_s);
+
+
+            .width50 &
+            {
+                --items_per_line: 1;
+            }
         }
     }
 
@@ -153,7 +165,7 @@
 
             color: var(--primary_color);
             border: 1px solid var(--primary_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
 
 
             &:hover
@@ -208,6 +220,65 @@
                     margin-bottom: 0;
                 }
             }
+        }
+    }
+
+
+    .small_item
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xs);
+
+        padding: var(--block_padding_s);
+
+        text-decoration: none;
+
+        color: currentColor;
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .name
+        {
+            font-size: var(--font_size_title_s);
+            font-weight: 700;
+        }
+
+
+        .desc
+        {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+
+            width: 466px;
+            max-width: 100%;
+            margin-bottom: 0;
+
+            text-overflow: ellipsis;
+
+            -webkit-line-clamp: 2;
+        }
+
+
+        .arr
+        {
+            position: absolute;
+            top: 0;
+            right: var(--inner_gap_xl);
+            bottom: 0;
+
+            display: block;
+
+            width: 24px;
+            margin-block: auto;
+
+            pointer-events: none;
+
+            aspect-ratio: 1 / 1;
         }
     }
 
@@ -311,7 +382,7 @@
 
             color: var(--light_color);
             border: 1px solid var(--light_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
 
 
             &:hover
@@ -345,61 +416,15 @@
     }
 
 
-    .small_item
+    .demo_btn
     {
-        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-top: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_xl);
 
-        display: flex;
-        flex-direction: column;
-        gap: var(--inner_gap_xs);
-
-        padding: var(--block_padding_s);
-
-        text-decoration: none;
-
-        color: currentColor;
-        border-radius: var(--border_radius);
-        background: var(--bg_grey);
-
-
-        .name
-        {
-            font-size: var(--font_size_title_s);
-            font-weight: 700;
-        }
-
-
-        .desc
-        {
-            display: -webkit-box;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-
-            width: 466px;
-            max-width: 100%;
-            margin-bottom: 0;
-
-            text-overflow: ellipsis;
-
-            -webkit-line-clamp: 2;
-        }
-
-
-        .arr
-        {
-            position: absolute;
-            top: 0;
-            right: var(--inner_gap_xl);
-            bottom: 0;
-
-            display: block;
-
-            width: 24px;
-            margin-block: auto;
-
-            pointer-events: none;
-
-            aspect-ratio: 1 / 1;
-        }
+        color: var(--primary_color);
+        border: 1px solid var(--primary_color);
+        border-radius: var(--border_radius_xs);
     }
 }

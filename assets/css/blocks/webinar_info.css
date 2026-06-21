@@ -1,0 +1,210 @@
+/*------------------
+    Webinar info
+------------------*/
+.webinar_page
+{
+    position: relative;
+
+
+    & > *
+    {
+        position: relative;
+
+        z-index: 3;
+    }
+
+
+    .bg
+    {
+        position: absolute;
+        top: -204px;
+        right: 50%;
+
+        display: block;
+
+        width: 1214px;
+        height: 600px;
+        margin-right: -720px;
+
+        content: '';
+        z-index: 1;
+        pointer-events: none;
+
+
+        img
+        {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.webinar_info
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--block_padding_l);
+
+
+    .head
+    {
+        display: flex;
+        flex-direction: column;
+
+
+        .date
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 5px;
+
+            margin-bottom: var(--inner_gap_s);
+
+
+            .icon
+            {
+                display: block;
+
+                width: 24px;
+
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+
+        .title
+        {
+            font-size: var(--font_size_title);
+            font-weight: 700;
+        }
+
+
+        .image
+        {
+            display: block;
+
+            margin-top: var(--block_padding_l);
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+
+
+            img
+            {
+                display: block;
+
+                width: 100%;
+
+                border-radius: inherit;
+            }
+        }
+    }
+
+
+    .topics
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            padding-block: var(--inner_gap_xl);
+            padding-inline: var(--block_padding_s);
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+
+
+            .name
+            {
+                position: relative;
+
+                padding-left: 16px;
+
+
+                &:before
+                {
+                    position: absolute;
+                    top: .5lh;
+                    left: 0;
+
+                    display: block;
+
+                    width: 7px;
+                    height: 9px;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+                }
+            }
+        }
+    }
+
+
+    .speakers
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_s);
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+
+
+            .photo
+            {
+                width: 100px;
+                max-width: 100%;
+
+                border-radius: var(--border_radius_s);
+                background: var(--bg_grey);
+
+                aspect-ratio: 1 / 1;
+
+
+                & + *
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    width: calc(100% - 100px - var(--inner_gap_l));
+                }
+            }
+
+
+            .name
+            {
+                font-size: var(--font_size_title_s);
+                font-weight: 700;
+            }
+        }
+    }
+}

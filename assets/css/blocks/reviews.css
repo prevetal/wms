@@ -87,7 +87,7 @@
 
                 width: 38px;
 
-                border-radius: var(--border_radius_xs);
+                border-radius: var(--border_radius_xxs);
                 background: var(--bg_grey);
 
                 aspect-ratio: 1 / 1;

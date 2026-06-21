@@ -113,7 +113,7 @@
             text-decoration: none;
 
             color: var(--light_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--primary_color);
 
 
@@ -131,8 +131,8 @@
     .bg
     {
         position: absolute;
+        top: -204px;
         right: 50%;
-        bottom: var(--inner_gap_s);
 
         display: block;
 

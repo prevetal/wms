@@ -15,6 +15,9 @@
     <path d="M10.75 12.75L16.0429 7.45711C16.4334 7.06658 16.4334 6.43342 16.0429 6.04289L10.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
     <path d="M14.75 6.75L0.75 6.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20" id="ic_check">
+    <path d="M2.00014 11.5542L8.45179 17.2794L19.1104 2.00016" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" id="ic_checkbox">
     <ellipse cx="7.53112" cy="7.5" rx="7.53112" ry="7.5" fill="currentColor"></ellipse>
     <path d="M4.0166 8L6.0249 10L11.0456 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -22,6 +25,10 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="ic_close">
     <path d="M5.5 16L16.1066 5.3934" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     <path d="M5.5 5L16.1066 15.6066" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ic_date">
+    <circle cx="12" cy="12.0002" r="8" stroke="currentColor" stroke-width="1.2"></circle>
+    <path d="M12 8.80029V11.7327C12 11.8999 12.0836 12.056 12.2226 12.1487L14.4 13.6003" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" id="ic_duration">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63022 14.1659C10.9676 14.1661 13.9762 11.4385 14.6302 8.16586C15.2842 4.89323 13.7113 2.4483 10.6302 1.16586C7.54912 -0.116588 3.49141 0.395698 1.63022 3.16586C-0.230976 5.93602 0.278347 9.79805 2.63022 12.1659C3.9442 13.4887 5.76566 14.1657 7.63022 14.1659Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -107,6 +114,9 @@
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 18" id="ic_tg">
     <path d="M1.51224 7.74886C7.41892 5.20887 11.3566 3.53418 13.3255 2.72512C18.9537 0.414817 20.1217 0.0135696 20.8845 0.000132155C21.0523 -0.00268034 21.4258 0.0382567 21.6696 0.232944C21.8721 0.397006 21.9292 0.618879 21.9577 0.774504C21.983 0.930129 22.0178 1.28482 21.9893 1.56169C21.6855 4.72418 20.3655 12.3985 19.6944 15.9407C19.4127 17.4395 18.8524 17.942 18.3111 17.9911C17.1335 18.098 16.2409 17.2236 15.1013 16.4863C13.3192 15.3323 12.3126 14.6142 10.5811 13.4882C8.5806 12.187 9.87838 11.4717 11.0179 10.3029C11.3155 9.99698 16.5004 5.3423 16.5985 4.92012C16.6112 4.86731 16.6239 4.67043 16.5036 4.56668C16.3865 4.46262 16.2123 4.49824 16.0857 4.52637C15.9053 4.56637 13.0596 6.42511 7.53906 10.1023C6.73188 10.6504 6.00069 10.9176 5.34228 10.9035C4.62056 10.8882 3.22787 10.4998 2.19278 10.1679C0.926608 9.76073 -0.0832116 9.54542 0.00542027 8.85386C0.0497362 8.49386 0.553119 8.12542 1.51224 7.74886Z" fill="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ic_update">
+    <path d="M5.67877 8.50002C6.35183 7.38202 7.33416 6.46428 8.51715 5.84829C9.70014 5.23229 11.0377 4.94203 12.382 5.0096C13.7263 5.07716 15.0249 5.49992 16.1342 6.23113C17.2436 6.96234 18.1205 7.97352 18.668 9.15287M4 6.32595L4.66551 9.09057C4.77886 9.56143 5.26877 9.85502 5.75975 9.74632L8.64247 9.10808M18.3212 15.5C17.6482 16.618 16.6658 17.5357 15.4828 18.1517C14.2999 18.7677 12.9623 19.058 11.618 18.9904C10.2737 18.9228 8.97513 18.5001 7.86576 17.7689C6.75639 17.0377 5.87947 16.0265 5.33196 14.8471M20 17.674L19.3345 14.9094C19.2211 14.4386 18.7312 14.145 18.2403 14.2537L15.3575 14.8919" stroke="currentColor" stroke-linecap="round"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 43" id="ic_video_play">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5567 1.2552L32.6851 16.6481C34.1186 17.5049 35 19.0764 35 20.7757C35 22.4751 34.1186 24.0466 32.6851 24.9034L10.5567 41.7438C6.35641 44.6605 0 42.1738 0 37.6162V5.36856C0 0.832395 6.36341 -1.66142 10.5567 1.2552Z" fill="currentColor"></path>

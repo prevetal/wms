@@ -3,37 +3,17 @@
 ------------------*/
 .useful_links
 {
-    .title
+    &.border
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: var(--inner_gap_xxs);
+        padding-top: var(--block_padding);
 
-        margin-bottom: var(--inner_gap_xl);
-
-        font-size: var(--font_size_title_s);
-        font-weight: 700;
+        border-top: 1px solid #e1e3ea;
+    }
 
 
-        .icon
-        {
-            display: block;
-
-            width: 24px;
-
-            color: var(--primary_color);
-
-            aspect-ratio: 1 / 1;
-        }
-
-
-        span
-        {
-            width: calc(100% - 24px - var(--inner_gap_xxs));
-        }
+    .block_head
+    {
+        margin-bottom: var(--block_padding_s);
     }
 
 
@@ -57,7 +37,7 @@
             text-decoration: none;
 
             color: currentColor;
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--bg_grey);
         }
     }

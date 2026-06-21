@@ -1,0 +1,261 @@
+/*------------------
+    Article info
+------------------*/
+.article_page
+{
+    position: relative;
+
+
+    & > *
+    {
+        position: relative;
+
+        z-index: 3;
+    }
+
+
+    .bg
+    {
+        position: absolute;
+        top: -204px;
+        right: 50%;
+
+        display: block;
+
+        width: 1214px;
+        height: 600px;
+        margin-right: -720px;
+
+        content: '';
+        z-index: 1;
+        pointer-events: none;
+
+
+        img
+        {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.article_info
+{
+    .head
+    {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: var(--block_padding_s);
+        padding-bottom: var(--block_padding_s);
+
+        border-bottom: 1px solid #e1e3ea;
+
+
+        .category
+        {
+            position: relative;
+
+            margin-bottom: var(--inner_gap_xs);
+            padding-left: 18px;
+
+            font-size: var(--font_size_s);
+
+
+            &:before
+            {
+                position: absolute;
+                top: .5lh;
+                left: 0;
+
+                display: block;
+
+                width: 10px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                border-radius: 3px;
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            &.purple:before
+            {
+                background: #acaafe;
+            }
+
+            &.red:before
+            {
+                background: #e99596;
+            }
+
+            &.green:before
+            {
+                background: #88d89d;
+            }
+
+            &.blue:before
+            {
+                background: #73cce5;
+            }
+
+            &.orange:before
+            {
+                background: #f6b68e;
+            }
+
+            &.pink:before
+            {
+                background: #d192e0;
+            }
+        }
+
+
+        .title
+        {
+            font-size: var(--font_size_title);
+            font-weight: 700;
+        }
+
+
+        .desc
+        {
+            position: relative;
+
+            width: 520px;
+            max-width: 100%;
+            margin-top: var(--inner_gap_l);
+            padding-left: 16px;
+
+            font-size: var(--font_size_l);
+            font-weight: 500;
+
+
+            &:before
+            {
+                position: absolute;
+                top: .5lh;
+                left: 0;
+
+                display: block;
+
+                width: 7px;
+                height: 9px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+            }
+        }
+
+
+        .image
+        {
+            display: block;
+
+            margin-top: var(--block_padding_l);
+
+            border-radius: var(--border_radius);
+            background: var(--bg_grey);
+
+
+            img
+            {
+                display: block;
+
+                width: 100%;
+
+                border-radius: inherit;
+            }
+        }
+
+
+
+        .info
+        {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            margin-top: var(--block_padding_s);
+
+
+            .author
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: var(--inner_gap_s);
+
+                margin-right: auto;
+
+
+                .photo
+                {
+                    display: block;
+
+                    width: 48px;
+
+                    border-radius: 50%;
+                    background: var(--bg_grey);
+
+                    aspect-ratio: 1 / 1;
+
+
+                    & + *
+                    {
+                        max-width: calc(100% - 48px - var(--inner_gap_s));
+                    }
+                }
+
+
+                .name
+                {
+                    font-size: var(--font_size_l);
+                    font-weight: 500;
+                }
+
+
+                .post
+                {
+                    font-size: var(--font_size_s);
+                }
+            }
+
+
+            .views,
+            .date,
+            .update
+            {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 5px;
+
+                margin-left: var(--inner_gap_xl);
+
+
+                .icon
+                {
+                    display: block;
+
+                    width: 24px;
+
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+}

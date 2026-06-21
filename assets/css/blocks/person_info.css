@@ -28,7 +28,7 @@
         width: 410px;
         max-width: 100%;
 
-        border-radius: 20px;
+        border-radius: var(--border_radius_s);
         background: var(--bg_grey);
 
         aspect-ratio: 1 / 1;
@@ -123,7 +123,7 @@
                 padding-inline: var(--inner_gap_xl);
 
                 color: var(--light_color);
-                border-radius: var(--border_radius_s);
+                border-radius: var(--border_radius_xs);
                 background: var(--primary_color);
 
 
@@ -162,7 +162,7 @@
 
                 color: var(--primary_color);
                 border: 1px solid;
-                border-radius: var(--border_radius_xs);
+                border-radius: var(--border_radius_xxs);
 
                 aspect-ratio: 1 / 1;
 
@@ -199,8 +199,8 @@
     .bg
     {
         position: absolute;
+        top: -204px;
         right: 50%;
-        bottom: var(--inner_gap_s);
 
         display: block;
 

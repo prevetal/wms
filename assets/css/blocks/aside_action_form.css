@@ -1,0 +1,41 @@
+/*-----------------------
+    Aside action form
+-----------------------*/
+.aside_action_form
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--inner_gap_s);
+
+
+    .desc
+    {
+        margin-top: calc(var(--inner_gap_xxxs) * -1);
+    }
+
+
+    .form
+    {
+        --form_line_gap: var(--inner_gap_xs);
+        --form_input_height: 42px;
+
+
+        .submit
+        {
+            padding-top: var(--inner_gap_s);
+        }
+
+
+        .submit_btn
+        {
+            height: var(--form_input_height);
+        }
+
+
+        .agree
+        {
+            margin-top: var(--inner_gap_xs);
+            padding-inline: var(--inner_gap);
+        }
+    }
+}

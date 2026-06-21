@@ -63,7 +63,7 @@
             width: 40px;
             margin-bottom: var(--inner_gap_xxs);
 
-            border-radius: var(--border_radius_xs);
+            border-radius: var(--border_radius_xxs);
             background: var(--gradient_primary);
 
             aspect-ratio: 1 / 1;

@@ -180,7 +180,7 @@
                 min-height: 79px;
                 padding: var(--inner_gap);
 
-                border-radius: var(--border_radius_xs);
+                border-radius: var(--border_radius_xxs);
                 background: var(--light_color);
             }
 

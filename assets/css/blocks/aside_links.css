@@ -1,0 +1,86 @@
+/*-----------------
+    ASide links
+-----------------*/
+.aside_links
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--inner_gap_xl);
+
+
+    .items
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+
+        a
+        {
+            position: relative;
+
+            display: block;
+
+            padding-left: var(--inner_gap_s);
+
+            transition: color .2s linear;
+            text-decoration: none;
+
+            color: var(--grey_color);
+
+
+            &:before
+            {
+                position: absolute;
+                top: .5lh;
+                left: 0;
+
+                display: block;
+
+                width: 7px;
+                height: 9px;
+
+                content: '';
+                transform: translateY(-50%);
+
+                background: url('../../../images/ic_list_marker.svg') 0 0/100% 100% no-repeat;
+            }
+
+
+            &:hover,
+            &.active
+            {
+                color: var(--dark_color);
+            }
+        }
+    }
+
+
+    .all_link
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: fit-content;
+        height: 42px;
+        padding-inline: var(--inner_gap_xl);
+
+        transition: .2s linear;
+        text-align: center;
+        text-decoration: none;
+
+        color: var(--primary_color);
+        border: 1px solid var(--primary_color);
+        border-radius: var(--border_radius_xs);
+
+
+        &:hover
+        {
+            color: var(--light_color);
+            background: var(--primary_color);
+        }
+    }
+}

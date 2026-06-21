@@ -30,7 +30,7 @@
         {
             display: block;
 
-            border-radius: 20px;
+            border-radius: var(--border_radius_s);
             background: var(--bg_grey);
 
             aspect-ratio: 1 / 1;
@@ -210,7 +210,7 @@
             padding-inline: var(--inner_gap_xl);
 
             color: var(--dark_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--light_color);
         }
 

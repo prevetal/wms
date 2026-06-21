@@ -6,7 +6,19 @@
     position: relative;
 
     margin-bottom: var(--block_padding_l);
-    padding-block: 70px 80px;
+    padding-block: 0 80px;
+
+
+    &.no_p
+    {
+        padding: 0;
+    }
+
+
+    &.s_m
+    {
+        margin-bottom: var(--block_padding_s);
+    }
 
 
     .cont
@@ -20,6 +32,13 @@
         gap: var(--block_padding_s);
 
         z-index: 3;
+    }
+
+
+    .breadcrumbs
+    {
+        width: 100%;
+        margin-bottom: var(--inner_gap_s);
     }
 
 
@@ -68,7 +87,7 @@
             height: 54px;
             padding-inline: var(--inner_gap_xl);
 
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--light_color);
 
 

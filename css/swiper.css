@@ -26,7 +26,7 @@
 {
     transition: .2s linear;
 
-    border-radius: var(--border_radius_xs);
+    border-radius: var(--border_radius_xxs);
     background: var(--bg_grey);
 
     --swiper-navigation-top-offset: 0;

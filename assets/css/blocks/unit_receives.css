@@ -132,7 +132,7 @@
             padding-inline: var(--inner_gap_xl);
 
             color: var(--light_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--primary_color);
         }
     }

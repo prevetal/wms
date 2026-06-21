@@ -27,7 +27,7 @@
             transition: .2s linear;
 
             border: 1px solid transparent;
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
             background: var(--bg_grey);
 
 
@@ -48,10 +48,83 @@
     }
 
 
+    .row
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--inner_gap_xl);
+    }
+
+
     .grid_row
     {
         --gap_x: var(--inner_gap_xl);
         --gap_y: var(--inner_gap_xl);
+    }
+
+
+    .list
+    {
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_s);
+
+
+        .row &
+        {
+            width: 409px;
+            max-width: 100%;
+        }
+
+
+        .item
+        {
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--inner_gap);
+
+            border-radius: 0;
+            background: none;
+
+
+            .thumb
+            {
+                width: 142px;
+                height: 135px;
+
+                aspect-ratio: auto;
+            }
+
+
+            .info
+            {
+                align-self: center;
+
+                width: calc(100% - 142px - var(--inner_gap));
+                padding: 0;
+            }
+
+
+            .name
+            {
+                font-size: var(--font_size_l);
+                font-weight: 500;
+            }
+
+
+            .desc
+            {
+                margin: 0;
+
+                -webkit-line-clamp: 3;
+            }
+        }
     }
 
 
@@ -62,6 +135,12 @@
 
         border-radius: var(--border_radius);
         background: var(--bg_grey);
+
+
+        &.l_w
+        {
+            width: calc(100% - 409px - var(--inner_gap_xl));
+        }
 
 
         .image
@@ -82,6 +161,14 @@
             background: var(--bg_grey);
 
             aspect-ratio: 1 / .6;
+
+
+            .l_w &
+            {
+                height: 324px;
+
+                aspect-ratio: auto;
+            }
         }
 
 
@@ -175,6 +262,12 @@
 
                 color: currentColor;
             }
+
+
+            .l_w &
+            {
+                width: 100%;
+            }
         }
 
 
@@ -189,6 +282,12 @@
             text-overflow: ellipsis;
 
             -webkit-line-clamp: 2;
+
+
+            .l_w &
+            {
+                -webkit-line-clamp: 3;
+            }
         }
 
 
@@ -221,7 +320,7 @@
 
             color: var(--primary_color);
             border: 1px solid var(--primary_color);
-            border-radius: var(--border_radius_s);
+            border-radius: var(--border_radius_xs);
 
 
             &:hover

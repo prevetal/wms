@@ -87,8 +87,8 @@
     .bg
     {
         position: absolute;
+        top: -204px;
         right: 50%;
-        bottom: 0;
 
         display: block;
 
