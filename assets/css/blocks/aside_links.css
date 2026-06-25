@@ -68,7 +68,7 @@
         height: 42px;
         padding-inline: var(--inner_gap_xl);
 
-        transition: .2s linear;
+        transition: color .2s linear;
         text-align: center;
         text-decoration: none;
 
@@ -79,8 +79,25 @@
 
         &:hover
         {
-            color: var(--light_color);
-            background: var(--primary_color);
+            color: var(--primary_color_h);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .aside_links
+    {
+        gap: var(--inner_gap_l);
+
+
+        .all_link
+        {
+            height: 40px;
+            padding-inline: var(--inner_gap_l);
         }
     }
 }

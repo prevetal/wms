@@ -34,11 +34,90 @@
             padding-block: var(--inner_gap_xxs);
             padding-inline: var(--inner_gap_xl);
 
+            transition: background .2s linear;
             text-decoration: none;
 
             color: currentColor;
             border-radius: var(--border_radius_xs);
             background: var(--bg_grey);
+
+
+            &:hover
+            {
+                background: #efeff5;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .useful_links
+    {
+        .items
+        {
+            a
+            {
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+}
+
+
+@media print,
+(max-width: 1023px)
+{
+    .useful_links
+    {
+        .items
+        {
+            display: grid;
+            overflow: auto;
+
+            width: calc(100% + var(--cont_padding_double));
+            margin-block: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            scroll-padding: 0 var(--cont_padding);
+            scroll-snap-type: x mandatory;
+            scrollbar-color: transparent transparent;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+
+                width: 0;
+                height: 0;
+
+                background-color: transparent;
+            }
+
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: transparent;
+            }
+
+
+            & > *
+            {
+                scroll-snap-align: start;
+            }
+
+
+            a
+            {
+                padding-inline: var(--inner_gap);
+            }
         }
     }
 }

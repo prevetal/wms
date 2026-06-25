@@ -20,8 +20,8 @@
     .data
     {
         display: flex;
-        align-content: center;
-        align-items: center;
+        align-content: flex-start;
+        align-items: flex-start;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: var(--inner_gap_xl);
@@ -47,6 +47,7 @@
         & + *
         {
             display: flex;
+            align-self: center;
             flex-direction: column;
             gap: var(--inner_gap);
 
@@ -102,6 +103,7 @@
 
             width: 40px;
 
+            transition: color .2s linear;
             text-decoration: none;
 
             color: var(--primary_color);
@@ -135,6 +137,12 @@
                     height: 11px;
                 }
             }
+
+
+            &:hover
+            {
+                color: var(--primary_color_h);
+            }
         }
     }
 
@@ -145,5 +153,135 @@
         height: 1px;
 
         background: #e1e3ea;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .about_author
+    {
+        .data
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .photo
+        {
+            width: 160px;
+
+
+            & + *
+            {
+                width: calc(100% - 160px - var(--inner_gap_l));
+            }
+        }
+
+
+        .top
+        {
+            & > div:first-child
+            {
+                gap: 4px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .about_author
+    {
+        .data
+        {
+            position: relative;
+
+            gap: 0;
+        }
+
+
+        .photo
+        {
+            position: absolute;
+
+            width: 64px;
+
+
+            & + *
+            {
+                gap: var(--inner_gap_s);
+
+                width: 100%;
+            }
+        }
+
+
+        .top
+        {
+            min-height: 64px;
+            padding-left: 76px;
+
+
+            & > div:first-child
+            {
+                align-self: center;
+
+                max-width: calc(100% - 30px - var(--inner_gap));
+            }
+        }
+
+
+        .name
+        {
+            font-size: var(--font_size_l);
+        }
+
+
+        .post
+        {
+            font-size: var(--font_size_s);
+        }
+
+
+        .socials
+        {
+            gap: 4px;
+
+            width: 30px;
+
+
+            a
+            {
+                &.tg_link
+                {
+                    .icon
+                    {
+                        width: 13px;
+                        height: 11px;
+                    }
+                }
+
+
+                &.vk_link
+                {
+                    .icon
+                    {
+                        width: 15px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_s);
+        }
     }
 }

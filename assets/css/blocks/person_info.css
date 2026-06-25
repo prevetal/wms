@@ -109,6 +109,7 @@
             gap: var(--inner_gap);
 
             margin-top: auto;
+            padding-top: var(--inner_gap_xl);
 
 
             .btn
@@ -118,9 +119,12 @@
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: flex-start;
+                gap: var(--inner_gap_xxxs);
 
                 height: 54px;
                 padding-inline: var(--inner_gap_xl);
+
+                transition: background .2s linear;
 
                 color: var(--light_color);
                 border-radius: var(--border_radius_xs);
@@ -133,6 +137,12 @@
                     align-self: 1 / 1;
 
                     width: 24px;
+                }
+
+
+                &:hover
+                {
+                    background: var(--primary_color_h);
                 }
             }
         }
@@ -158,6 +168,7 @@
 
                 width: 54px;
 
+                transition: color .2s linear;
                 text-decoration: none;
 
                 color: var(--primary_color);
@@ -191,6 +202,12 @@
                         height: 14px;
                     }
                 }
+
+
+                &:hover
+                {
+                    color: var(--primary_color_h);
+                }
             }
         }
     }
@@ -219,6 +236,189 @@
 
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .person_info
+    {
+        .cont
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .photo
+        {
+            width: 350px;
+        }
+
+
+        .data
+        {
+            width: calc(100% - 350px - var(--inner_gap_l));
+            min-height: 350px;
+
+
+            .post,
+            .items
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .btns
+            {
+                .btn
+                {
+                    height: 48px;
+                    padding-inline: var(--inner_gap_l);
+                }
+
+
+                .socials
+                {
+                    gap: var(--inner_gap_xxs);
+
+
+                    a
+                    {
+                        width: 48px;
+
+
+                        &.tg_link
+                        {
+                            .icon
+                            {
+                                width: 20px;
+                                height: 16px;
+                            }
+                        }
+
+
+                        &.vk_link
+                        {
+                            .icon
+                            {
+                                width: 24px;
+                                height: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .bg
+        {
+            top: -160px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .person_info
+    {
+        .photo
+        {
+            width: 280px;
+        }
+
+
+        .data
+        {
+            width: calc(100% - 280px - var(--inner_gap_l));
+            min-height: 280px;
+        }
+
+
+        .bg
+        {
+            width: 1000px;
+            height: 494px;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .person_info
+    {
+        .photo
+        {
+            width: 100%;
+        }
+
+
+        .data
+        {
+            width: 100%;
+            min-height: 0;
+
+
+            .btns
+            {
+                .btn
+                {
+                    height: 44px;
+                    padding-inline: var(--inner_gap);
+                }
+
+
+                .socials
+                {
+                    margin-left: auto;
+
+
+                    a
+                    {
+                        width: 44px;
+
+
+                        &.tg_link
+                        {
+                            .icon
+                            {
+                                width: 18px;
+                                height: 15px;
+                            }
+                        }
+
+
+                        &.vk_link
+                        {
+                            .icon
+                            {
+                                width: 20px;
+                                height: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
         }
     }
 }

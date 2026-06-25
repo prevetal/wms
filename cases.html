@@ -40,9 +40,9 @@
 			<div class="main">
 				<header>
 					<div class="cont">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
-						</div>
+						</a>
 
 						<nav class="menu">
 							<div class="item">
@@ -103,8 +103,95 @@
 
 							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
 						</button>
+
+						<button class="mob_menu_btn">
+							<img class="icon" src="images/ic_menu.svg" alt="" loading="lazy">
+
+							<img class="icon" src="images/ic_close.svg" alt="" loading="lazy">
+						</button>
 					</div>
 				</header>
+
+
+				<section class="mob_menu">
+					<div class="menu">
+						<div class="item">
+							<a href="/">
+								<span>Услуги</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Решения</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Кейсы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Тарифы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/" class="sub_link">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
+
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+
+								<span>Ресурсы</span>
+							</a>
+
+							<div class="sub">
+								<div><a href="/">Глоссарий</a></div>
+
+								<div><a href="/">Вебинары</a></div>
+
+								<div><a href="/">Редакция</a></div>
+
+								<div><a href="/">Блог</a></div>
+
+								<div><a href="/">О компании</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Контакты</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="contacts">
+						<div class="item">
+							<div class="label">Телефон</div>
+
+							<div class="val">
+								<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="label">Почта</div>
+
+							<div class="val">
+								<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn">
+						<span>Демо-версия</span>
+
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
+					</button>
+				</section>
 
 
 				<section class="page_head">
@@ -132,220 +219,202 @@
 				</section>
 
 
-				<section class="cases block tabs_container">
+				<section class="cases block">
 					<div class="cont">
 						<div class="head">
 							<div class="block_head">
 								<div class="title">Наши кейсы</div>
 							</div>
 
-							<div class="tabs">
-								<button data-content="#cases_tab1" data-level="level1" class="btn active">Все</button>
+							<div class="categories">
+								<a href="/" class="btn active">Все</a>
 
-								<button data-content="#cases_tab2" data-level="level1" class="btn">Ритейл</button>
+								<a href="/" class="btn">Ритейл</a>
 
-								<button data-content="#cases_tab3" data-level="level1" class="btn">Производство</button>
+								<a href="/" class="btn">Производство</a>
 
-								<button data-content="#cases_tab4" data-level="level1" class="btn">E-commerce</button>
+								<a href="/" class="btn">E-commerce</a>
 
-								<button data-content="#cases_tab5" data-level="level1" class="btn">3-PL</button>
+								<a href="/" class="btn">3-PL</a>
 							</div>
 						</div>
 
-						<div class="tab_content level1 active" id="cases_tab1">
-							<div class="grid_row">
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb1.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+						<div class="grid_row">
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb1.jpg" alt="" loading="lazy" class="cover">
+								</picture>
 
-									<div class="info">
-										<div class="row">
-											<div class="category purple">Логистика</div>
+								<div class="info">
+									<div class="row">
+										<div class="category purple">Логистика</div>
 
-											<div class="result purple">
-												<span>+25%</span>
+										<div class="result purple">
+											<span>+25%</span>
 
-												<picture class="icon">
-													<img src="images/ic_case_result1.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+											<picture class="icon">
+												<img src="images/ic_case_result1.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">Логистика Х</div>
-
-										<div class="desc">Оптимизация процессов приемки и отгрузки на распределительном центре...</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
 
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb2.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="name">Логистика Х</div>
 
-									<div class="info">
-										<div class="row">
-											<div class="category red">Производство</div>
+									<div class="desc">Оптимизация процессов приемки и отгрузки на распределительном центре...</div>
 
-											<div class="result red">
-												<span>+25%</span>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 
-												<picture class="icon">
-													<img src="images/ic_case_result2.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb2.jpg" alt="" loading="lazy" class="cover">
+								</picture>
+
+								<div class="info">
+									<div class="row">
+										<div class="category red">Производство</div>
+
+										<div class="result red">
+											<span>+25%</span>
+
+											<picture class="icon">
+												<img src="images/ic_case_result2.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">Завод Сигма</div>
-
-										<div class="desc">Автоматизация учета сырья и готовой продукции на производственных линиях...</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
 
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb3.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="name">Завод Сигма</div>
 
-									<div class="info">
-										<div class="row">
-											<div class="category green">Ритейл</div>
+									<div class="desc">Автоматизация учета сырья и готовой продукции на производственных линиях...</div>
 
-											<div class="result green">
-												<span>+25%</span>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 
-												<picture class="icon">
-													<img src="images/ic_case_result3.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb3.jpg" alt="" loading="lazy" class="cover">
+								</picture>
+
+								<div class="info">
+									<div class="row">
+										<div class="category green">Ритейл</div>
+
+										<div class="result green">
+											<span>+25%</span>
+
+											<picture class="icon">
+												<img src="images/ic_case_result3.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">Мега Маркет</div>
-
-										<div class="desc">Масштабирование складской сети и ускорение обработки заказов в 2 раза....</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
 
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb4.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="name">Мега Маркет</div>
 
-									<div class="info">
-										<div class="row">
-											<div class="category blue">E-commerce</div>
+									<div class="desc">Масштабирование складской сети и ускорение обработки заказов в 2 раза....</div>
 
-											<div class="result blue">
-												<span>+25%</span>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 
-												<picture class="icon">
-													<img src="images/ic_case_result4.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb4.jpg" alt="" loading="lazy" class="cover">
+								</picture>
+
+								<div class="info">
+									<div class="row">
+										<div class="category blue">E-commerce</div>
+
+										<div class="result blue">
+											<span>+25%</span>
+
+											<picture class="icon">
+												<img src="images/ic_case_result4.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">E-com Plus</div>
-
-										<div class="desc">Снижение операционных издержек за счет внедрения алгоритмов волнового отбора...</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
 
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb5.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="name">E-com Plus</div>
 
-									<div class="info">
-										<div class="row">
-											<div class="category orange">3PL</div>
+									<div class="desc">Снижение операционных издержек за счет внедрения алгоритмов волнового отбора...</div>
 
-											<div class="result orange">
-												<span>+25%</span>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 
-												<picture class="icon">
-													<img src="images/ic_case_result5.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb5.jpg" alt="" loading="lazy" class="cover">
+								</picture>
+
+								<div class="info">
+									<div class="row">
+										<div class="category orange">3PL</div>
+
+										<div class="result orange">
+											<span>+25%</span>
+
+											<picture class="icon">
+												<img src="images/ic_case_result5.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">Global 3PL</div>
-
-										<div class="desc">Повышение точности учета и прозрачности операций для внешних заказчиков...</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
 
-								<a href="/" class="case">
-									<picture class="thumb">
-										<img src="images/tmp/case_thumb6.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="name">Global 3PL</div>
 
-									<div class="info">
-										<div class="row">
-											<div class="category pink">Производство</div>
+									<div class="desc">Повышение точности учета и прозрачности операций для внешних заказчиков...</div>
 
-											<div class="result pink">
-												<span>+25%</span>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 
-												<picture class="icon">
-													<img src="images/ic_case_result6.svg" alt="" loading="lazy">
-												</picture>
-											</div>
+							<a href="/" class="case">
+								<picture class="thumb">
+									<img src="images/tmp/case_thumb6.jpg" alt="" loading="lazy" class="cover">
+								</picture>
+
+								<div class="info">
+									<div class="row">
+										<div class="category pink">Производство</div>
+
+										<div class="result pink">
+											<span>+25%</span>
+
+											<picture class="icon">
+												<img src="images/ic_case_result6.svg" alt="" loading="lazy">
+											</picture>
 										</div>
-
-										<div class="name">Альфа Пром</div>
-
-										<div class="desc">Интеграция WMS с производственным оборудованием для бесперебойных поставок...</div>
-
-										<div class="btn">Читать</div>
 									</div>
-								</a>
-							</div>
 
-							<div class="pagination">
-								<a href="/" class="prev">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
-								</a>
+									<div class="name">Альфа Пром</div>
 
-								<a class="active">1</a>
+									<div class="desc">Интеграция WMS с производственным оборудованием для бесперебойных поставок...</div>
 
-								<a href="/">2</a>
-
-								<a href="/">3</a>
-
-								<a href="/">4</a>
-
-								<a href="/">5</a>
-
-								<a href="/" class="next">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
-								</a>
-							</div>
+									<div class="btn">Читать</div>
+								</div>
+							</a>
 						</div>
 
-						<div class="tab_content level1" id="cases_tab2">
+						<div class="pagination">
+							<a href="/" class="prev">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
+							</a>
 
-						</div>
+							<a class="active">1</a>
 
-						<div class="tab_content level1" id="cases_tab3">
+							<a href="/">2</a>
 
-						</div>
+							<a href="/">3</a>
 
-						<div class="tab_content level1" id="cases_tab4">
+							<a href="/">4</a>
 
-						</div>
+							<a href="/">5</a>
 
-						<div class="tab_content level1" id="cases_tab5">
-
+							<a href="/" class="next">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -528,6 +597,8 @@
 				<div class="cont">
 					<div class="data">
 						<picture class="image">
+							<source srcset="images/footer_img_mob.svg" media="(max-width: 767px)">
+
 							<img src="images/footer_img.svg" alt="" loading="lazy">
 						</picture>
 
@@ -604,7 +675,7 @@
 
 							<div class="contacts">
 								<div class="item">
-									<div class="labe">Телефон</div>
+									<div class="label">Телефон</div>
 
 									<div class="val">
 										<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
@@ -612,7 +683,7 @@
 								</div>
 
 								<div class="item">
-									<div class="labe">Почта</div>
+									<div class="label">Почта</div>
 
 									<div class="val">
 										<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>

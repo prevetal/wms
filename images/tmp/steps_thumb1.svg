@@ -1,30 +1,167 @@
 <svg width="350" height="150" viewBox="0 0 350 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="60" y="80" width="290" height="70" rx="10" fill="url(#paint0_linear_8010_220)"/>
-<rect x="100" y="96" width="180" height="6" rx="3" fill="#E1E3EA"/>
-<rect x="100" y="130" width="180" height="6" rx="3" fill="#E1E3EA"/>
-<rect x="100" y="107" width="54" height="6" rx="3" fill="#E1E3EA"/>
-<circle cx="321.5" cy="99.5" r="4.5" fill="#E1E3EA"/>
-<circle cx="328.5" cy="99.5" r="4.5" fill="#E1E3EA"/>
-<rect x="60" width="290" height="70" rx="10" fill="white"/>
-<rect x="100" y="15" width="180" height="6" rx="3" fill="#E1E3EA"/>
-<rect x="100" y="49" width="180" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="100" y="26" width="54" height="6" rx="3" fill="#E1E3EA"/>
-<circle cx="328.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"/>
-<circle cx="321.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"/>
-<circle cx="313.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"/>
-<circle cx="82.5" cy="22.5" r="7.5" fill="#ADDFAC"/>
-<path d="M79 23L81 25L86 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<rect width="40" height="40" rx="10" fill="url(#paint1_linear_8010_220)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M22 9.00094C21.9363 8.99663 22.0643 9.00094 22 9.00094H16C13.3017 9.00094 11 11.3166 11 14.0009V26.0009C11 28.6853 13.3017 31.0009 16 31.0009H24C26.6983 31.0009 29 28.6853 29 26.0009V17.0009H25C23.4378 17.0009 22 15.555 22 14.0009V9.00094ZM15 20.0009C15 19.5771 15.574 19.0009 16 19.0009H24C24.426 19.0009 25 19.5771 25 20.0009C25 20.4248 24.426 21.0009 24 21.0009H16C15.574 21.0009 15 20.4248 15 20.0009ZM16 24.0009C15.574 24.0009 15 24.5771 15 25.0009C15 25.4248 15.574 26.0009 16 26.0009H20C20.426 26.0009 21 25.4248 21 25.0009C21 24.5771 20.426 24.0009 20 24.0009H16Z" fill="white"/>
-<path d="M29 15.0009C28.9351 14.8992 28.0783 15.0944 28 15.0009L24 10.0009C23.8684 9.84388 24.1594 10.1241 24 10.0009V14.0009C24 14.7073 24.2899 15.0009 25 15.0009H29Z" fill="white"/>
-<defs>
-<linearGradient id="paint0_linear_8010_220" x1="205" y1="80" x2="205" y2="150" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F3F3F9"/>
-<stop offset="1" stop-color="#EBEBF5"/>
-</linearGradient>
-<linearGradient id="paint1_linear_8010_220" x1="40" y1="20" x2="0" y2="20" gradientUnits="userSpaceOnUse">
-<stop stop-color="#5F73FE"/>
-<stop offset="1" stop-color="#798AFF" stop-opacity="0.894118"/>
-</linearGradient>
-</defs>
-</svg>
+	<style>
+	    /* Базовая настройка анимации движения */
+	    .card_a1 {
+	        animation: cardMove 6s infinite;
+	    }
+	    
+	    /* Заливка, которая плавно исчезает/появляется */
+	    .gray-bg, .gray-elements {
+	        animation: grayFade 6s infinite;
+	    }
+	    .white-elements {
+	        animation: whiteFade 6s infinite;
+	    }
+	    .checkmark {
+	        transform-origin: 82.5px 22.5px;
+	        animation: checkmarkAnim 6s infinite;
+	    }
+
+	    /* Рассинхронизация 3-х карточек для создания бесшовного цикла конвейера */
+	    .c1_a, .c1_a .gray-bg, .c1_a .gray-elements, .c1_a .white-elements, .c1_a .checkmark { animation-delay: 0s; }
+	    .c2_a, .c2_a .gray-bg, .c2_a .gray-elements, .c2_a .white-elements, .c2_a .checkmark { animation-delay: -2s; }
+	    .c3_a, .c3_a .gray-bg, .c3_a .gray-elements, .c3_a .white-elements, .c3_a .checkmark { animation-delay: -4s; }
+
+	    /* Ключевые кадры для движения карточки (подъем наверх) */
+	    @keyframes cardMove {
+	        0% { transform: translateY(80px); opacity: 1; animation-timing-function: ease-in-out; }
+	        15% { transform: translateY(0px); opacity: 1; animation-timing-function: linear; }
+	        33.33% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-in-out; }
+	        48.33% { transform: translateY(-80px); opacity: 0; animation-timing-function: linear; }
+	        49% { transform: translateY(160px); opacity: 0; animation-timing-function: linear; }
+	        66.66% { transform: translateY(160px); opacity: 0; animation-timing-function: ease-in-out; }
+	        81.66% { transform: translateY(80px); opacity: 1; animation-timing-function: linear; }
+	        100% { transform: translateY(80px); opacity: 1; }
+	    }
+
+	    /* Исчезновение серого фона */
+	    @keyframes grayFade {
+	        0% { opacity: 1; animation-timing-function: ease-in-out; }
+	        15% { opacity: 0; animation-timing-function: linear; }
+	        48.33% { opacity: 0; }
+	        49% { opacity: 1; }
+	        100% { opacity: 1; }
+	    }
+
+	    /* Появление элементов белой плашки */
+	    @keyframes whiteFade {
+	        0% { opacity: 0; animation-timing-function: ease-in-out; }
+	        15% { opacity: 1; animation-timing-function: linear; }
+	        48.33% { opacity: 1; }
+	        49% { opacity: 0; }
+	        100% { opacity: 0; }
+	    }
+
+	    /* Появление галочки (с небольшим zoom-эффектом для красоты) */
+	    @keyframes checkmarkAnim {
+	        0% { opacity: 0; transform: scale(0.5); animation-timing-function: ease-in-out; }
+	        15% { opacity: 1; transform: scale(1); animation-timing-function: linear; }
+	        48.33% { opacity: 1; transform: scale(1); }
+	        49% { opacity: 0; transform: scale(0.5); }
+	        100% { opacity: 0; transform: scale(0.5); }
+	    }
+	</style>
+
+	<defs>
+	    <!-- Градиент переведен в относительные координаты, чтобы он корректно двигался вместе с карточкой -->
+	    <linearGradient id="gray-grad" x1="0" y1="0" x2="0" y2="1">
+	        <stop stop-color="#F3F3F9"></stop>
+	        <stop offset="1" stop-color="#EBEBF5"></stop>
+	    </linearGradient>
+	    <linearGradient id="blue-grad" x1="1" y1="0" x2="0" y2="0">
+	        <stop stop-color="#5F73FE"></stop>
+	        <stop offset="1" stop-color="#798AFF" stop-opacity="0.894118"></stop>
+	    </linearGradient>
+	    
+	    <clipPath id="cards-clip">
+	        <rect x="0" y="0" width="350" height="150"></rect>
+	    </clipPath>
+	</defs>
+
+	<!-- Синяя иконка (стоичная, не участвует в цикле анимации) -->
+	<g class="static-icon" transform="translate(0, 0)">
+	    <rect width="40" height="40" rx="10" fill="url(#blue-grad)"></rect>
+	    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 9.00094C21.9363 8.99663 22.0643 9.00094 22 9.00094H16C13.3017 9.00094 11 11.3166 11 14.0009V26.0009C11 28.6853 13.3017 31.0009 16 31.0009H24C26.6983 31.0009 29 28.6853 29 26.0009V17.0009H25C23.4378 17.0009 22 15.555 22 14.0009V9.00094ZM15 20.0009C15 19.5771 15.574 19.0009 16 19.0009H24C24.426 19.0009 25 19.5771 25 20.0009C25 20.4248 24.426 21.0009 24 21.0009H16C15.574 21.0009 15 20.4248 15 20.0009ZM16 24.0009C15.574 24.0009 15 24.5771 15 25.0009C15 25.4248 15.574 26.0009 16 26.0009H20C20.426 26.0009 21 25.4248 21 25.0009C21 24.5771 20.426 24.0009 20 24.0009H16Z" fill="white"></path>
+	    <path d="M29 15.0009C28.9351 14.8992 28.0783 15.0944 28 15.0009L24 10.0009C23.8684 9.84388 24.1594 10.1241 24 10.0009V14.0009C24 14.7073 24.2899 15.0009 25 15.0009H29Z" fill="white"></path>
+	</g>
+
+	<!-- Контейнер для карточек, чтобы они не выезжали за границы (опционально) -->
+	<g clip-path="url(#cards-clip)">
+	    <!-- КАРТОЧКА 1 -->
+	    <g class="card_a1 c1_a">
+	        <rect base-bg="true" x="60" y="0" width="290" height="70" rx="10" fill="white"></rect>
+	        <rect class="gray-bg" x="60" y="0" width="290" height="70" rx="10" fill="url(#gray-grad)"></rect>
+
+	        <!-- Общие линии (не меняются) -->
+	        <rect x="100" y="15" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	        <rect x="100" y="26" width="54" height="6" rx="3" fill="#E1E3EA"></rect>
+
+	        <!-- Элементы серой карточки -->
+	        <g class="gray-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	            <circle cx="321.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	            <circle cx="328.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	        </g>
+	        
+	        <!-- Элементы готовой белой карточки -->
+	        <g class="white-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#F6F6F8"></rect>
+	            <circle cx="328.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="321.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="313.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	        </g>
+
+	        <!-- Галочка -->
+	        <g class="checkmark">
+	            <circle cx="82.5" cy="22.5" r="7.5" fill="#ADDFAC"></circle>
+	            <path d="M79 23L81 25L86 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+	        </g>
+	    </g>
+
+	    <!-- КАРТОЧКА 2 -->
+	    <g class="card_a1 c2_a">
+	        <rect base-bg="true" x="60" y="0" width="290" height="70" rx="10" fill="white"></rect>
+	        <rect class="gray-bg" x="60" y="0" width="290" height="70" rx="10" fill="url(#gray-grad)"></rect>
+	        <rect x="100" y="15" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	        <rect x="100" y="26" width="54" height="6" rx="3" fill="#E1E3EA"></rect>
+	        <g class="gray-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	            <circle cx="321.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	            <circle cx="328.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	        </g>
+	        <g class="white-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#F6F6F8"></rect>
+	            <circle cx="328.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="321.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="313.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	        </g>
+	        <g class="checkmark">
+	            <circle cx="82.5" cy="22.5" r="7.5" fill="#ADDFAC"></circle>
+	            <path d="M79 23L81 25L86 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+	        </g>
+	    </g>
+
+	    <!-- КАРТОЧКА 3 -->
+	    <g class="card_a1 c3_a">
+	        <rect base-bg="true" x="60" y="0" width="290" height="70" rx="10" fill="white"></rect>
+	        <rect class="gray-bg" x="60" y="0" width="290" height="70" rx="10" fill="url(#gray-grad)"></rect>
+	        <rect x="100" y="15" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	        <rect x="100" y="26" width="54" height="6" rx="3" fill="#E1E3EA"></rect>
+	        <g class="gray-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#E1E3EA"></rect>
+	            <circle cx="321.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	            <circle cx="328.5" cy="18.5" r="4.5" fill="#E1E3EA"></circle>
+	        </g>
+	        <g class="white-elements">
+	            <rect x="100" y="49" width="180" height="6" rx="3" fill="#F6F6F8"></rect>
+	            <circle cx="328.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="321.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	            <circle cx="313.5" cy="18.5" r="5" fill="#F6F6F8" stroke="white"></circle>
+	        </g>
+	        <g class="checkmark">
+	            <circle cx="82.5" cy="22.5" r="7.5" fill="#ADDFAC"></circle>
+	            <path d="M79 23L81 25L86 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+	        </g>
+	    </g>
+	</g>
+</svg>	

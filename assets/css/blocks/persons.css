@@ -14,8 +14,8 @@
     .item
     {
         display: flex;
-        align-content: center;
-        align-items: center;
+        align-content: flex-start;
+        align-items: flex-start;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: var(--block_padding_s);
@@ -29,6 +29,9 @@
         .photo
         {
             display: block;
+
+            width: 179px;
+            max-width: 100%;
 
             border-radius: var(--border_radius_s);
             background: var(--bg_grey);
@@ -54,6 +57,13 @@
             align-items: flex-start;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: var(--inner_gap);
+
+
+            & > *:first-child
+            {
+                width: calc(100% - 88px - var(--inner_gap));
+            }
         }
 
 
@@ -79,6 +89,8 @@
             justify-content: flex-start;
             gap: var(--inner_gap_xxxs);
 
+            width: 88px;
+
 
             a
             {
@@ -90,6 +102,7 @@
 
                 width: 40px;
 
+                transition: color .2s linear;
                 text-decoration: none;
 
                 color: var(--primary_color);
@@ -122,6 +135,12 @@
                         width: 20px;
                         height: 11px;
                     }
+                }
+
+
+                &:hover
+                {
+                    color: var(--primary_color_h);
                 }
             }
         }
@@ -173,6 +192,7 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: var(--inner_gap);
 
         margin-top: var(--inner_gap_xl);
         padding: var(--block_padding_s);
@@ -209,9 +229,17 @@
             height: 54px;
             padding-inline: var(--inner_gap_xl);
 
+            transition: background .2s linear;
+
             color: var(--dark_color);
             border-radius: var(--border_radius_xs);
             background: var(--light_color);
+
+
+            &:hover
+            {
+                background: var(--light_color_soft);
+            }
         }
 
 
@@ -223,6 +251,7 @@
 
             display: block;
 
+            width: auto;
             height: 100%;
 
             z-index: 1;
@@ -235,6 +264,258 @@
 
                 height: 100%;
             }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .persons
+    {
+        .grid_row
+        {
+            --gap_x: var(--inner_gap_l);
+            --gap_y: var(--inner_gap_l);
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap_l);
+
+
+            .photo
+            {
+                width: 148px;
+            }
+
+
+            .info
+            {
+                gap: var(--inner_gap);
+
+                width: calc(100% - 148px - var(--inner_gap_l));
+            }
+
+
+            .top
+            {
+                & > *:first-child
+                {
+                    width: calc(100% - 40px - var(--inner_gap));
+                }
+            }
+
+
+            .socials
+            {
+                width: 40px;
+            }
+        }
+
+
+        .join
+        {
+            margin-top: var(--inner_gap_l);
+            padding: var(--inner_gap_l);
+
+
+            .btn
+            {
+                height: 48px;
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+
+
+        .bg
+        {
+            top: -160px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .persons
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            .top
+            {
+                & > *:first-child
+                {
+                    width: calc(100% - 88px - var(--inner_gap));
+                }
+            }
+
+
+            .socials
+            {
+                width: 88px;
+            }
+        }
+
+
+        .join
+        {
+            .block_head
+            {
+                .desc
+                {
+                    width: 260px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+
+        .bg
+        {
+            width: 1000px;
+            height: 494px;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .persons
+    {
+        .grid_row
+        {
+            --gap_y: var(--inner_gap_xs);
+        }
+
+
+        .item
+        {
+            position: relative;
+
+            gap: 0;
+
+
+            .photo
+            {
+                position: absolute;
+
+                width: 64px;
+            }
+
+
+            .info
+            {
+                gap: var(--inner_gap_s);
+
+                width: 100%;
+
+
+                .name
+                {
+                    font-size: var(--font_size_l);
+                }
+
+
+                .post
+                {
+                    margin-top: 4px;
+
+                    font-size: var(--font_size_s);
+                }
+
+
+                .desc
+                {
+                    font-size: var(--font_size_s);
+                }
+            }
+
+
+            .top
+            {
+                min-height: 64px;
+                padding-left: 76px;
+
+
+                & > *:first-child
+                {
+                    align-self: center;
+
+                    width: calc(100% - 30px - var(--inner_gap));
+                }
+            }
+
+
+            .socials
+            {
+                gap: 4px;
+
+                width: 30px;
+
+
+                a
+                {
+                    &.tg_link
+                    {
+                        .icon
+                        {
+                            width: 13px;
+                            height: 11px;
+                        }
+                    }
+
+
+                    &.vk_link
+                    {
+                        .icon
+                        {
+                            width: 15px;
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .join
+        {
+            .block_head
+            {
+                gap: var(--inner_gap_xs);
+            }
+
+
+            .btn
+            {
+                height: 44px;
+                padding-inline: var(--inner_gap);
+            }
+        }
+
+
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
         }
     }
 }

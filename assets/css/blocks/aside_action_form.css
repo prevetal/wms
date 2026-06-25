@@ -39,3 +39,30 @@
         }
     }
 }
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .aside_action_form
+    {
+        .form
+        {
+            --form_input_height: 44px;
+
+
+            .submit
+            {
+                padding-top: var(--inner_gap_xs);
+            }
+
+
+            .agree
+            {
+                margin-top: var(--inner_gap_xxs);
+                padding-inline: 0;
+            }
+        }
+    }
+}

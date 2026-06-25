@@ -104,12 +104,14 @@
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
+            gap: var(--inner_gap_xxxs);
 
             width: fit-content;
             height: 49px;
             margin-top: auto;
             padding-inline: var(--inner_gap_xl);
 
+            transition: background .2s linear;
             text-decoration: none;
 
             color: var(--light_color);
@@ -123,6 +125,12 @@
                 align-self: 1 / 1;
 
                 width: 24px;
+            }
+
+
+            &:hover
+            {
+                background: var(--primary_color_h);
             }
         }
     }
@@ -151,6 +159,143 @@
 
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .main_article
+    {
+        .cont
+        {
+            gap: var(--block_padding_l);
+        }
+
+
+        .image
+        {
+            width: 480px;
+        }
+
+
+        .thumb
+        {
+            height: 400px;
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap);
+
+            width: calc(100% - 480px - var(--block_padding_l));
+            min-height: 400px;
+
+
+            .name
+            {
+                font-size: var(--font_size_title);
+            }
+
+
+            .desc
+            {
+                width: 400px;
+            }
+
+
+            .link
+            {
+                height: 48px;
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+
+
+        .bg
+        {
+            top: -160px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .main_article
+    {
+        .cont
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .image
+        {
+            width: 100%;
+        }
+
+
+        .data
+        {
+            width: 100%;
+            min-height: 0;
+
+
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .bg
+        {
+            width: 1000px;
+            height: 494px;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .main_article
+    {
+        .thumb
+        {
+            height: 300px;
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_s);
+        }
+
+
+        .link
+        {
+            height: 44px;
+            padding-inline: var(--inner_gap);
+        }
+
+
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
         }
     }
 }

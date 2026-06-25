@@ -3,7 +3,7 @@
 ------------------*/
 .case_details
 {
-    .grid
+    .row
     {
         display: flex;
         align-content: flex-start;
@@ -140,6 +140,7 @@
             flex-direction: column;
             gap: var(--block_padding_s);
 
+            height: 100%;
             padding-block: var(--block_padding);
             padding-inline: var(--block_padding_s);
 
@@ -344,6 +345,216 @@
             {
                 font-size: var(--font_size_title);
                 font-weight: 700;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .case_details
+    {
+        .row
+        {
+            gap: var(--block_padding);
+        }
+
+
+        .info
+        {
+            position: relative;
+
+            gap: 0;
+
+            width: 100%;
+
+
+            .pre_title
+            {
+                margin-bottom: var(--inner_gap);
+            }
+
+
+            .block_head
+            {
+                gap: var(--inner_gap_xs);
+
+
+                .desc
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .features
+            {
+                .items
+                {
+                    column-gap: var(--inner_gap_l);
+
+
+                    & > *
+                    {
+                        &,
+                        &:nth-child(2n)
+                        {
+                            gap: 4px;
+
+                            width: fit-content;
+
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .data
+        {
+            width: 100%;
+
+
+            .grid
+            {
+                gap: var(--inner_gap_l);
+            }
+
+
+            .item
+            {
+                gap: var(--inner_gap_l);
+
+                padding-block: var(--inner_gap_l);
+                padding-inline: var(--inner_gap_l);
+
+
+                .desc
+                {
+                    ul
+                    {
+                        gap: var(--inner_gap_xs);
+                    }
+                }
+            }
+        }
+
+
+        .stats
+        {
+            margin-top: var(--inner_gap_l);
+            padding-block: var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l);
+
+
+            .block_head
+            {
+                width: 100%;
+                margin-bottom: var(--block_head_offset_s);
+            }
+
+
+            .grid_row
+            {
+                width: auto;
+                max-width: none;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .case_details
+    {
+        .data
+        {
+            .item
+            {
+                &.l_h
+                {
+                    padding-bottom: 160px;
+                }
+
+
+                .thumb
+                {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .case_details
+    {
+        .info
+        {
+            .features
+            {
+                .items
+                {
+                    row-gap: var(--inner_gap_xs);
+
+
+                    & > *
+                    {
+                        width: 145px;
+
+
+                        &:nth-child(2n)
+                        {
+                            width: 175px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .data
+        {
+            .grid
+            {
+                gap: var(--inner_gap_xs);
+
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+
+
+        .stats
+        {
+            .grid_row
+            {
+                --items_per_line: 2;
+
+
+                & > *
+                {
+                    width: calc(100% / var(--items_per_line) * var(--width_multiplier, 1) - var(--gap_x));
+                }
+            }
+
+
+            .item
+            {
+                .name
+                {
+                    font-size: var(--font_size_s);
+                }
             }
         }
     }

@@ -41,9 +41,9 @@
 			<div class="main">
 				<header>
 					<div class="cont">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
-						</div>
+						</a>
 
 						<nav class="menu">
 							<div class="item">
@@ -104,8 +104,95 @@
 
 							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
 						</button>
+
+						<button class="mob_menu_btn">
+							<img class="icon" src="images/ic_menu.svg" alt="" loading="lazy">
+
+							<img class="icon" src="images/ic_close.svg" alt="" loading="lazy">
+						</button>
 					</div>
 				</header>
+
+
+				<section class="mob_menu">
+					<div class="menu">
+						<div class="item">
+							<a href="/">
+								<span>Услуги</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Решения</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Кейсы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Тарифы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/" class="sub_link">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
+
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+
+								<span>Ресурсы</span>
+							</a>
+
+							<div class="sub">
+								<div><a href="/">Глоссарий</a></div>
+
+								<div><a href="/">Вебинары</a></div>
+
+								<div><a href="/">Редакция</a></div>
+
+								<div><a href="/">Блог</a></div>
+
+								<div><a href="/">О компании</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Контакты</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="contacts">
+						<div class="item">
+							<div class="label">Телефон</div>
+
+							<div class="val">
+								<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="label">Почта</div>
+
+							<div class="val">
+								<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn">
+						<span>Демо-версия</span>
+
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
+					</button>
+				</section>
 
 
 				<section class="tariffs block no_top_pad">
@@ -431,6 +518,12 @@
 				<section class="action_block block">
 					<div class="cont">
 						<div class="data">
+							<picture class="image">
+								<source srcset="images/action_block_img_mob.svg" media="(max-width: 767px)">
+
+								<img src="images/action_block_img.svg" alt="" loading="lazy">
+							</picture>
+
 							<div class="block_head">
 								<div class="title">Не знаете, какой тариф выбрать?</div>
 
@@ -438,10 +531,6 @@
 
 								<button class="btn">Связаться с нами</button>
 							</div>
-
-							<picture class="image">
-								<img src="images/tmp/action_block_img.svg" alt="" loading="lazy">
-							</picture>
 
 							<picture class="bg">
 								<img src="images/bg_action_block.svg" alt="" loading="lazy" class="cover">
@@ -653,6 +742,8 @@
 				<div class="cont">
 					<div class="data">
 						<picture class="image">
+							<source srcset="images/footer_img_mob.svg" media="(max-width: 767px)">
+
 							<img src="images/footer_img.svg" alt="" loading="lazy">
 						</picture>
 
@@ -729,7 +820,7 @@
 
 							<div class="contacts">
 								<div class="item">
-									<div class="labe">Телефон</div>
+									<div class="label">Телефон</div>
 
 									<div class="val">
 										<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
@@ -737,7 +828,7 @@
 								</div>
 
 								<div class="item">
-									<div class="labe">Почта</div>
+									<div class="label">Почта</div>
 
 									<div class="val">
 										<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>

@@ -1,30 +1,143 @@
 <svg width="350" height="199" viewBox="0 0 350 199" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="160" width="350" height="70" rx="9.8903" fill="white"/>
-<rect x="65" y="192" width="217" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="65" y="181" width="236" height="6" rx="3" fill="#F6F6F8"/>
-<circle cx="323.5" cy="192.5" r="7" stroke="#F6F6F8"/>
-<rect x="15" y="175" width="40" height="40" rx="10" fill="#E1E3EA"/>
-<path d="M32.2438 187.9C32.9805 187.124 34.0334 186.452 34.999 186.45C35.9691 186.448 37.0141 187.121 37.7542 187.9C38.4927 188.677 39.1319 189.781 39.1319 190.8C39.1319 191.818 38.4927 192.922 37.7542 193.699C37.0141 194.478 35.9691 195.151 34.999 195.149V196.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect y="80" width="350" height="70" rx="9.8903" fill="white"/>
-<rect x="65" y="112" width="217" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="65" y="123" width="126" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="65" y="101" width="236" height="6" rx="3" fill="#F6F6F8"/>
-<circle cx="323.5" cy="112.5" r="7" stroke="#F6F6F8"/>
-<rect x="15" y="95" width="40" height="40" rx="10" fill="#E1E3EA"/>
-<rect x="34.999" y="125" width="0.0001" height="0.0001" stroke="white" stroke-width="3" stroke-linejoin="round"/>
-<path d="M32.2438 107.9C32.9805 107.124 34.0334 106.452 34.999 106.45C35.9691 106.448 37.0141 107.121 37.7542 107.9C38.4927 108.677 39.1319 109.781 39.1319 110.8C39.1319 111.818 38.4927 112.922 37.7542 113.699C37.0141 114.478 35.9691 115.151 34.999 115.149V116.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect width="350" height="70" rx="9.8903" fill="white"/>
-<rect x="65" y="32" width="217" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="65" y="43" width="126" height="6" rx="3" fill="#F6F6F8"/>
-<rect x="65" y="21" width="236" height="6" rx="3" fill="#F6F6F8"/>
-<circle cx="323.5" cy="32.5" r="7.5" fill="#ADDFAC"/>
-<path d="M320 33L322 35L327 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="15" y="15" width="40" height="40" rx="10" fill="url(#paint0_linear_8010_224)"/>
-<path d="M37.2 33C37.0895 33 37 32.9105 37 32.8V25.6C37 25.4078 36.7553 25.3262 36.64 25.48L28.6 36.2C28.3528 36.5296 28.588 37 29 37H32.8C32.9105 37 33 37.0895 33 37.2V44.4C33 44.5922 33.2447 44.6738 33.36 44.52L41.4 33.8C41.6472 33.4704 41.412 33 41 33H37.2Z" fill="white" stroke="white" stroke-width="1.5"/>
-<defs>
-<linearGradient id="paint0_linear_8010_224" x1="55" y1="35" x2="15" y2="35" gradientUnits="userSpaceOnUse">
-<stop stop-color="#5F73FE"/>
-<stop offset="1" stop-color="#798AFF" stop-opacity="0.894118"/>
-</linearGradient>
-</defs>
-</svg>
+									<style>
+									    /* Анимация движения карточек */
+									    .card {
+									        animation: cardSlide 6s ease-in-out infinite;
+									    }
+									    
+									    /* Сдвиг во времени для обеспечения бесшовного конвейера */
+									    .c1, .c1 .unprocessed, .c1 .processed { animation-delay: 0s; }
+									    .c2, .c2 .unprocessed, .c2 .processed { animation-delay: -1.5s; }
+									    .c3, .c3 .unprocessed, .c3 .processed { animation-delay: -3.0s; }
+									    .c4, .c4 .unprocessed, .c4 .processed { animation-delay: -4.5s; }
+
+									    /* Анимация исчезновения серого вопроса */
+									    .unprocessed {
+									        animation: unprocFade 6s ease-in-out infinite;
+									    }
+									    /* Анимация появления синей молнии + галочки */
+									    .processed {
+									        animation: procFade 6s ease-in-out infinite;
+									    }
+
+									    /* Ключевые кадры для движения карточки (подъем шаг за шагом) */
+									    @keyframes cardSlide {
+									        0%, 5% { transform: translateY(240px); opacity: 0; }           /* Ожидание снизу */
+									        15%, 35% { transform: translateY(160px); opacity: 1; }         /* Заняла нижнюю позицию */
+									        45%, 60% { transform: translateY(80px); opacity: 1; }          /* Заняла центральную позицию */
+									        70%, 85% { transform: translateY(0px); opacity: 1; }           /* Поднимается вверх (здесь выполнится) */
+									        95%, 100% { transform: translateY(-80px); opacity: 0; }        /* Уходит вверх и растворяется */
+									    }
+
+									    /* Фейд: Серые элементы скрываются, как только карточка достигает самого верха */
+									    @keyframes unprocFade {
+									        0%, 60% { opacity: 1; transform: scale(1); }
+									        65%, 100% { opacity: 0; transform: scale(0.95); }
+									    }
+
+									    /* Фейд: Цветные элементы появляются к моменту фиксации карточки наверху */
+									    @keyframes procFade {
+									        0%, 60% { opacity: 0; transform: scale(0.95); }
+									        65%, 100% { opacity: 1; transform: scale(1); }
+									    }
+									</style>
+
+									<defs>
+									    <!-- Градиент переведен в <defs> чтобы работать на всех копиях карточек -->
+									    <linearGradient id="paint0_linear_8010_224" x1="55" y1="35" x2="15" y2="35" gradientUnits="userSpaceOnUse">
+									        <stop stop-color="#5F73FE"/>
+									        <stop offset="1" stop-color="#798AFF" stop-opacity="0.894118"/>
+									    </linearGradient>
+									    
+									    <clipPath id="cards-clip">
+									        <rect x="0" y="0" width="350" height="199" />
+									    </clipPath>
+									</defs>
+
+									<!-- Контейнер скрывающий элементы за границами экрана сверху/снизу -->
+									<g clip-path="url(#cards-clip)">
+									    <!-- КАРТОЧКA 1 -->
+									    <g class="card c1">
+									        <rect y="0" width="350" height="70" rx="9.8903" fill="white"/>
+									        <rect x="65" y="21" width="236" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="32" width="217" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="43" width="126" height="6" rx="3" fill="#F6F6F8"/>
+
+									        <g class="unprocessed">
+									            <circle cx="323.5" cy="32.5" r="7" stroke="#F6F6F8"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="#E1E3EA"/>
+									            <rect x="34.999" y="45" width="0.0001" height="0.0001" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+									            <path d="M32.2438 27.9C32.9805 27.124 34.0334 26.452 34.999 26.45C35.9691 26.448 37.0141 27.121 37.7542 27.9C38.4927 28.677 39.1319 29.781 39.1319 30.8C39.1319 31.818 38.4927 32.922 37.7542 33.699C37.0141 34.478 35.9691 35.151 34.999 35.149V36.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									        </g>
+									        <g class="processed">
+									            <circle cx="323.5" cy="32.5" r="7.5" fill="#ADDFAC"/>
+									            <path d="M320 33L322 35L327 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="url(#paint0_linear_8010_224)"/>
+									            <path d="M37.2 33C37.0895 33 37 32.9105 37 32.8V25.6C37 25.4078 36.7553 25.3262 36.64 25.48L28.6 36.2C28.3528 36.5296 28.588 37 29 37H32.8C32.9105 37 33 37.0895 33 37.2V44.4C33 44.5922 33.2447 44.6738 33.36 44.52L41.4 33.8C41.6472 33.4704 41.412 33 41 33H37.2Z" fill="white" stroke="white" stroke-width="1.5"/>
+									        </g>
+									    </g>
+
+									    <!-- КАРТОЧКA 2 -->
+									    <g class="card c2">
+									        <rect y="0" width="350" height="70" rx="9.8903" fill="white"/>
+									        <rect x="65" y="21" width="236" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="32" width="217" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="43" width="126" height="6" rx="3" fill="#F6F6F8"/>
+
+									        <g class="unprocessed">
+									            <circle cx="323.5" cy="32.5" r="7" stroke="#F6F6F8"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="#E1E3EA"/>
+									            <rect x="34.999" y="45" width="0.0001" height="0.0001" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+									            <path d="M32.2438 27.9C32.9805 27.124 34.0334 26.452 34.999 26.45C35.9691 26.448 37.0141 27.121 37.7542 27.9C38.4927 28.677 39.1319 29.781 39.1319 30.8C39.1319 31.818 38.4927 32.922 37.7542 33.699C37.0141 34.478 35.9691 35.151 34.999 35.149V36.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									        </g>
+									        <g class="processed">
+									            <circle cx="323.5" cy="32.5" r="7.5" fill="#ADDFAC"/>
+									            <path d="M320 33L322 35L327 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="url(#paint0_linear_8010_224)"/>
+									            <path d="M37.2 33C37.0895 33 37 32.9105 37 32.8V25.6C37 25.4078 36.7553 25.3262 36.64 25.48L28.6 36.2C28.3528 36.5296 28.588 37 29 37H32.8C32.9105 37 33 37.0895 33 37.2V44.4C33 44.5922 33.2447 44.6738 33.36 44.52L41.4 33.8C41.6472 33.4704 41.412 33 41 33H37.2Z" fill="white" stroke="white" stroke-width="1.5"/>
+									        </g>
+									    </g>
+
+									    <!-- КАРТОЧКA 3 -->
+									    <g class="card c3">
+									        <rect y="0" width="350" height="70" rx="9.8903" fill="white"/>
+									        <rect x="65" y="21" width="236" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="32" width="217" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="43" width="126" height="6" rx="3" fill="#F6F6F8"/>
+
+									        <g class="unprocessed">
+									            <circle cx="323.5" cy="32.5" r="7" stroke="#F6F6F8"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="#E1E3EA"/>
+									            <rect x="34.999" y="45" width="0.0001" height="0.0001" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+									            <path d="M32.2438 27.9C32.9805 27.124 34.0334 26.452 34.999 26.45C35.9691 26.448 37.0141 27.121 37.7542 27.9C38.4927 28.677 39.1319 29.781 39.1319 30.8C39.1319 31.818 38.4927 32.922 37.7542 33.699C37.0141 34.478 35.9691 35.151 34.999 35.149V36.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									        </g>
+									        <g class="processed">
+									            <circle cx="323.5" cy="32.5" r="7.5" fill="#ADDFAC"/>
+									            <path d="M320 33L322 35L327 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="url(#paint0_linear_8010_224)"/>
+									            <path d="M37.2 33C37.0895 33 37 32.9105 37 32.8V25.6C37 25.4078 36.7553 25.3262 36.64 25.48L28.6 36.2C28.3528 36.5296 28.588 37 29 37H32.8C32.9105 37 33 37.0895 33 37.2V44.4C33 44.5922 33.2447 44.6738 33.36 44.52L41.4 33.8C41.6472 33.4704 41.412 33 41 33H37.2Z" fill="white" stroke="white" stroke-width="1.5"/>
+									        </g>
+									    </g>
+
+									    <!-- КАРТОЧКA 4 (Невидима и обеспечивает пересменку снизу вверх) -->
+									    <g class="card c4">
+									        <rect y="0" width="350" height="70" rx="9.8903" fill="white"/>
+									        <rect x="65" y="21" width="236" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="32" width="217" height="6" rx="3" fill="#F6F6F8"/>
+									        <rect x="65" y="43" width="126" height="6" rx="3" fill="#F6F6F8"/>
+
+									        <g class="unprocessed">
+									            <circle cx="323.5" cy="32.5" r="7" stroke="#F6F6F8"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="#E1E3EA"/>
+									            <rect x="34.999" y="45" width="0.0001" height="0.0001" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+									            <path d="M32.2438 27.9C32.9805 27.124 34.0334 26.452 34.999 26.45C35.9691 26.448 37.0141 27.121 37.7542 27.9C38.4927 28.677 39.1319 29.781 39.1319 30.8C39.1319 31.818 38.4927 32.922 37.7542 33.699C37.0141 34.478 35.9691 35.151 34.999 35.149V36.599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									        </g>
+									        <g class="processed">
+									            <circle cx="323.5" cy="32.5" r="7.5" fill="#ADDFAC"/>
+									            <path d="M320 33L322 35L327 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									            <rect x="15" y="15" width="40" height="40" rx="10" fill="url(#paint0_linear_8010_224)"/>
+									            <path d="M37.2 33C37.0895 33 37 32.9105 37 32.8V25.6C37 25.4078 36.7553 25.3262 36.64 25.48L28.6 36.2C28.3528 36.5296 28.588 37 29 37H32.8C32.9105 37 33 37.0895 33 37.2V44.4C33 44.5922 33.2447 44.6738 33.36 44.52L41.4 33.8C41.6472 33.4704 41.412 33 41 33H37.2Z" fill="white" stroke="white" stroke-width="1.5"/>
+									        </g>
+									    </g>
+									</g>
+									</svg>

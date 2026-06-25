@@ -32,7 +32,7 @@
         font-weight: 700;
 
 
-        & > *
+        .col
         {
             padding-inline: var(--inner_gap_xl);
         }
@@ -73,7 +73,7 @@
         }
 
 
-        & > *
+        .col
         {
             padding-inline: var(--inner_gap_xl);
         }
@@ -101,6 +101,150 @@
             margin-inline: auto;
 
             color: var(--primary_color);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .comparison_functions
+    {
+        .col
+        {
+            width: 240px;
+            min-width: 240px;
+        }
+
+
+        .titles
+        {
+            gap: 0;
+
+
+            .col
+            {
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+
+
+        .items
+        {
+            gap: var(--inner_gap_xxxs);
+        }
+
+
+        .item
+        {
+            gap: 0;
+
+            min-height: 68px;
+
+
+            .col
+            {
+                padding-inline: var(--inner_gap_l);
+            }
+
+
+            .check
+            {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .comparison_functions
+    {
+        .data_wrap
+        {
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            width: calc(100% + var(cont_padding_double));
+            margin-inline: calc(var(--cont_padding) * -1);
+        }
+
+
+        .data
+        {
+            width: 800px;
+        }
+
+
+        .titles
+        {
+            .col
+            {
+                padding-inline: var(--cont_padding);
+            }
+        }
+
+
+        .item
+        {
+            min-height: 60px;
+
+
+            .col
+            {
+                padding-inline: var(--cont_padding);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .comparison_functions
+    {
+        .data
+        {
+            width: 720px;
+        }
+
+
+        .col
+        {
+            width: 180px;
+            min-width: 180px;
+        }
+
+
+        .titles
+        {
+            margin-bottom: var(--inner_gap_xs);
+
+            font-size: var(--font_size_l);
+            font-weight: 600;
+        }
+
+
+        .item
+        {
+            b
+            {
+                font-size: var(--font_size);
+            }
+
+
+            .check
+            {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 }

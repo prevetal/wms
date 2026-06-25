@@ -26,6 +26,10 @@
                         spaceBetween: getCssVar(el, '--spaceBetween-768'),
                         slidesPerView: getCssVar(el, '--slidesPerView-768'),
                     },
+                    1024: {
+                        spaceBetween: getCssVar(el, '--spaceBetween-1024'),
+                        slidesPerView: getCssVar(el, '--slidesPerView-1024'),
+                    },
                     1280: {
                         spaceBetween: getCssVar(el, '--spaceBetween-1280'),
                         slidesPerView: getCssVar(el, '--slidesPerView-1280'),

@@ -335,6 +335,8 @@
             margin-top: auto;
             padding-inline: var(--inner_gap_xl);
 
+            transition: background .2s linear;
+
             color: var(--light_color);
             border-radius: var(--border_radius_xs);
             background: var(--primary_color);
@@ -354,6 +356,18 @@
             {
                 color: var(--primary_color);
                 background: var(--light_color);
+
+
+                &:hover
+                {
+                    background: var(--light_color_soft);
+                }
+            }
+
+
+            &:hover
+            {
+                background: var(--primary_color_h);
             }
         }
     }
@@ -382,6 +396,242 @@
 
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .tariffs
+    {
+        .toggle
+        {
+            font-size: var(--font_size);
+
+
+            .discount
+            {
+                font-size: var(--font_size_s);
+            }
+        }
+
+
+        .grid_row
+        {
+            --gap_x: var(--inner_gap_l);
+            --gap_y: var(--inner_gap_l);
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap_l);
+
+            padding: var(--inner_gap_l);
+
+
+            .top
+            {
+                gap: var(--inner_gap_xs);
+
+
+                .name
+                {
+                    width: calc(100% - 40px - var(--inner_gap_xs));
+
+                    font-size: 28px;
+                }
+            }
+
+
+            .price
+            {
+                .val
+                {
+                    font-size: calc(var(--font_size_title) - 2px);
+                }
+
+
+                .currency
+                {
+                    margin-bottom: 8px;
+                }
+
+
+                .period
+                {
+                    margin-bottom: 12px;
+
+                    font-size: var(--font_size);
+                }
+
+
+                .desc
+                {
+                    width: 220px;
+                    margin-top: 0;
+
+                    font-size: var(--font_size_s);
+                }
+            }
+
+
+            .divider
+            {
+                height: 2px;
+            }
+
+
+            .features
+            {
+                gap: var(--inner_gap_s);
+
+
+                & > *
+                {
+                    gap: var(--inner_gap_xs);
+                }
+
+
+                .icon
+                {
+                    width: 24px;
+                }
+
+
+                span
+                {
+                    width: calc(100% - 24px - var(--inner_gap_xs));
+                }
+            }
+
+
+            .btn
+            {
+                gap: var(--inner_gap_xxxs);
+
+                height: 48px;
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+
+
+        .bg
+        {
+            top: -160px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .tariffs
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .item
+        {
+            &.primary
+            {
+                order: 3;
+
+                --width_multiplier: 2;
+            }
+        }
+
+
+        .bg
+        {
+            width: 1000px;
+            height: 494px;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .tariffs
+    {
+        .toggle
+        {
+            gap: var(--inner_gap_xxxs);
+
+
+            .discount
+            {
+                margin-left: -4px;
+                padding-inline: var(--inner_gap_xxxs);
+
+                font-size: var(--font_size_xs);
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_y: var(--inner_gap_xs);
+        }
+
+
+        .item
+        {
+            gap: var(--inner_gap);
+
+
+            &.primary
+            {
+                order: 0;
+
+                --width_multiplier: 1;
+            }
+
+
+            .top
+            {
+                .name
+                {
+                    font-size: 26px;
+                }
+            }
+
+
+            .price
+            {
+                .val
+                {
+                    font-size: 52px;
+                }
+            }
+
+
+            .features
+            {
+                gap: var(--inner_gap_xxs);
+            }
+        }
+
+
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
         }
     }
 }

@@ -41,7 +41,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
-        margin-bottom: var(--block_padding_l);
+        margin-bottom: var(--block_head_offset);
 
 
         .block_head
@@ -144,6 +144,59 @@
             {
                 width: calc(100% - 21px);
             }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    reviews
+    {
+        .review
+        {
+            padding: var(--inner_gap_l);
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .reviews
+    {
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 324px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px)
+{
+    .reviews
+    {
+        .swiper
+        {
+            padding-bottom: 56px;
+
+            --spaceBetween: var(--inner_gap_xs);
+        }
+
+
+        .swiper-controls
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
     }
 }

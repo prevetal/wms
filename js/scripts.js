@@ -22,61 +22,18 @@ $('body').on('click', '.accordion_item .top', function(e) {
 })
 
 
-// Tabs
-var locationHash = window.location.hash
-
-$('body').on('click', '.tabs .btn', function(e) {
-	e.preventDefault()
-
-	if (!$(this).hasClass('active')) {
-		let parent = $(this).closest('.tabs_container'),
-			activeTab = $(this).data('content'),
-			activeTabContent = $(activeTab),
-			level = $(this).data('level')
-
-		parent.find('.tabs:first .btn').removeClass('active')
-		parent.find('.tab_content.' + level).removeClass('active')
-
-		$(this).addClass('active')
-		activeTabContent.addClass('active')
-	}
-})
-
-if (locationHash && $('.tabs_container').length) {
-	let activeTab = $(`.tabs button[data-content="${locationHash}"]`),
-		activeTabContent = $(locationHash),
-		parent = activeTab.closest('.tabs_container'),
-		level = activeTab.data('level')
-
-	parent.find('.tabs:first .btn').removeClass('active')
-	parent.find('.tab_content.' + level).removeClass('active')
-
-	activeTab.addClass('active')
-	activeTabContent.addClass('active')
-
-	$('html, body').stop().animate({ scrollTop: $activeTabContent.offset().top }, 1000)
-}
-
-
 if (is_touch_device()) {
 	// Submenu on the touch screen
-	$('header .menu .item > a.sub_link').click(function (e) {
+	$('header .menu .item > a.sub_link, footer .menu .item > a.sub_link').click(function (e) {
 		e.preventDefault()
 
-		const dropdown = $(this).next(),
-			isOpen = dropdown.hasClass('show')
-
-		$('header .menu .sub').removeClass('show')
-
-		if (!isOpen) {
-			dropdown.addClass('show')
-		}
+		$(this).closest('.item').toggleClass('open')
 	})
 
 	// Close the submenu when clicking outside it
 	document.addEventListener('click', e => {
 		if ($(e.target).closest('.menu').length === 0) {
-			$('header .menu .sub').removeClass('show')
+			$('header .menu .item, footer .menu .item').removeClass('open')
 		}
 	})
 }
@@ -99,6 +56,23 @@ if (selects) {
 		}
 	})
 }
+
+
+// Mob. menu
+$('header .mob_menu_btn').click((e) => {
+	e.preventDefault()
+
+	$('header .mob_menu_btn').toggleClass('active')
+	$('body').toggleClass('lock')
+	$('.mob_menu').toggleClass('show')
+})
+
+
+$('.mob_menu .menu .item  > a.sub_link').click(function(e) {
+	e.preventDefault()
+
+	$(this).closest('.item').toggleClass('open')
+})
 
 
 

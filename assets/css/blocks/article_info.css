@@ -163,16 +163,6 @@
 
             border-radius: var(--border_radius);
             background: var(--bg_grey);
-
-
-            img
-            {
-                display: block;
-
-                width: 100%;
-
-                border-radius: inherit;
-            }
         }
 
 
@@ -254,6 +244,115 @@
                     width: 24px;
 
                     aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .article_page
+    {
+        .bg
+        {
+            top: -160px;
+        }
+    }
+
+
+    .article_info
+    {
+        .head
+        {
+            .title
+            {
+                line-height: 105%;
+            }
+
+
+            .desc
+            {
+                width: 456px;
+                margin-top: var(--inner_gap);
+
+                font-size: var(--font_size);
+            }
+
+
+            .info
+            {
+                .views,
+                .date,
+                .update
+                {
+                    gap: 4px;
+
+                    margin-left: var(--inner_gap);
+
+                    font-size: var(--font_size_s);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px)
+{
+    .article_page
+    {
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
+        }
+    }
+
+
+    .article_info
+    {
+        .head
+        {
+            .title
+            {
+                line-height: normal;
+            }
+
+
+            .image
+            {
+                img
+                {
+                    min-height: 240px;
+                }
+            }
+
+
+            .info
+            {
+                justify-content: space-between;
+
+
+                .author
+                {
+                    width: 100%;
+                    margin-bottom: var(--inner_gap);
+                }
+
+
+                .views,
+                .date,
+                .update
+                {
+                    margin-left: 0;
                 }
             }
         }

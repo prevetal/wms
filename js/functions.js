@@ -2,11 +2,11 @@ const initAdaptiveViewport = () => {
 	const viewportMeta = document.querySelector('meta[name="viewport"]')
 	if (!viewportMeta) return
 
-	const mqDeviceNarrow = window.matchMedia('(max-device-width: 374px)')
+	const mqDeviceNarrow = window.matchMedia('(max-device-width: 389px)')
 
 	const apply = () => {
 		mqDeviceNarrow.matches
-			? viewportMeta.setAttribute('content', 'width=375, user-scalable=no')
+			? viewportMeta.setAttribute('content', 'width=390, user-scalable=no')
 			: viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1')
 	}
 

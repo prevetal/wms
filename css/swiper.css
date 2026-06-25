@@ -48,7 +48,7 @@
 
     &:hover
     {
-        --swiper-navigation-color: var(--primary_color);
+        background: #efeff5;
     }
 }
 

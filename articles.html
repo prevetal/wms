@@ -39,9 +39,9 @@
 			<div class="main">
 				<header>
 					<div class="cont">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
-						</div>
+						</a>
 
 						<nav class="menu">
 							<div class="item">
@@ -102,8 +102,95 @@
 
 							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
 						</button>
+
+						<button class="mob_menu_btn">
+							<img class="icon" src="images/ic_menu.svg" alt="" loading="lazy">
+
+							<img class="icon" src="images/ic_close.svg" alt="" loading="lazy">
+						</button>
 					</div>
 				</header>
+
+
+				<section class="mob_menu">
+					<div class="menu">
+						<div class="item">
+							<a href="/">
+								<span>Услуги</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Решения</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Кейсы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Тарифы</span>
+							</a>
+						</div>
+
+						<div class="item">
+							<a href="/" class="sub_link">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
+
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+
+								<span>Ресурсы</span>
+							</a>
+
+							<div class="sub">
+								<div><a href="/">Глоссарий</a></div>
+
+								<div><a href="/">Вебинары</a></div>
+
+								<div><a href="/">Редакция</a></div>
+
+								<div><a href="/">Блог</a></div>
+
+								<div><a href="/">О компании</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<a href="/">
+								<span>Контакты</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="contacts">
+						<div class="item">
+							<div class="label">Телефон</div>
+
+							<div class="val">
+								<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="label">Почта</div>
+
+							<div class="val">
+								<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn">
+						<span>Демо-версия</span>
+
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
+					</button>
+				</section>
 
 
 				<section class="page_head s_m no_p">
@@ -156,224 +243,222 @@
 				</section>
 
 
-				<section class="articles block tabs_container">
+				<section class="articles block">
 					<div class="cont">
-						<div class="tabs">
-							<button data-content="#articles_tab1" data-level="level1" class="btn active">Все категории</button>
+						<div class="categories">
+							<a href="/" class="btn active">Все категории</a>
 
-							<button data-content="#articles_tab2" data-level="level1" class="btn">Автоматизация</button>
+							<a href="/" class="btn">Автоматизация</a>
 
-							<button data-content="#articles_tab3" data-level="level1" class="btn">Кейсы</button>
+							<a href="/" class="btn">Кейсы</a>
 
-							<button data-content="#articles_tab4" data-level="level1" class="btn">Обновления системы</button>
+							<a href="/" class="btn">Обновления системы</a>
 
-							<button data-content="#articles_tab5" data-level="level1" class="btn">WMS Аналитика</button>
+							<a href="/" class="btn">WMS Аналитика</a>
 
-							<button data-content="#articles_tab6" data-level="level1" class="btn">Безопасность</button>
+							<a href="/" class="btn">Безопасность</a>
 						</div>
 
-						<div class="tab_content level1 active" id="articles_tab1">
-							<div class="grid_row">
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb1.jpg 1x, images/tmp/article_thumb1@2x.jpg 2x">
+						<div class="grid_row">
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb1.jpg 1x, images/tmp/article_thumb1@2x.jpg 2x">
 
-											<img src="images/tmp/article_thumb1.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
+										<img src="images/tmp/article_thumb1.jpg" alt="" loading="lazy" class="cover">
+									</picture>
+								</a>
 
-									<div class="info">
-										<div class="category purple">Кейсы</div>
+								<div class="info">
+									<div class="category purple">Кейсы</div>
 
-										<div class="name">
-											<a href="/">Как внедрить WMS за 30 дней</a>
-										</div>
-
-										<div class="desc">Пошаговое руководство по быстрому развертыванию облачной системы управле...</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>97.3k</span>
-											</div>
-										</div>
+									<div class="name">
+										<a href="/">Как внедрить WMS за 30 дней</a>
 									</div>
-								</div>
 
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb2.jpg 1x, images/tmp/article_thumb2@2x.jpg 2x">
+									<div class="desc">Пошаговое руководство по быстрому развертыванию облачной системы управле...</div>
 
-											<img src="images/tmp/article_thumb2.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
 
-									<div class="info">
-										<div class="category blue">Безопасность</div>
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
 
-										<div class="name">
-											<a href="/">Безопасность данных в облаке</a>
-										</div>
-
-										<div class="desc">Как мы защищаем информацию наших клиентов: шифрование, протоколы доступа и...</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>87.1k</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb3.jpg 1x, images/tmp/article_thumb3@2x.jpg 2x">
-
-											<img src="images/tmp/article_thumb3.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
-
-									<div class="info">
-										<div class="category purple">Кейсы</div>
-
-										<div class="name">
-											<a href="/">Снижение издержек на фулфилмент</a>
-										</div>
-
-										<div class="desc">Реальные цифры: как автоматизация сборки заказов помогла сократить операционные....</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>32.2k</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb1.jpg 1x, images/tmp/article_thumb1@2x.jpg 2x">
-
-											<img src="images/tmp/article_thumb1.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
-
-									<div class="info">
-										<div class="category purple">Кейсы</div>
-
-										<div class="name">
-											<a href="/">Как внедрить WMS за 30 дней</a>
-										</div>
-
-										<div class="desc">Пошаговое руководство по быстрому развертыванию облачной системы управле...</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>97.3k</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb2.jpg 1x, images/tmp/article_thumb2@2x.jpg 2x">
-
-											<img src="images/tmp/article_thumb2.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
-
-									<div class="info">
-										<div class="category blue">Безопасность</div>
-
-										<div class="name">
-											<a href="/">Безопасность данных в облаке</a>
-										</div>
-
-										<div class="desc">Как мы защищаем информацию наших клиентов: шифрование, протоколы доступа и...</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>87.1k</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="item">
-									<a href="/" class="image">
-										<picture class="thumb">
-											<source srcset="images/tmp/article_thumb3.jpg 1x, images/tmp/article_thumb3@2x.jpg 2x">
-
-											<img src="images/tmp/article_thumb3.jpg" alt="" loading="lazy" class="cover">
-										</picture>
-									</a>
-
-									<div class="info">
-										<div class="category purple">Кейсы</div>
-
-										<div class="name">
-											<a href="/">Снижение издержек на фулфилмент</a>
-										</div>
-
-										<div class="desc">Реальные цифры: как автоматизация сборки заказов помогла сократить операционные....</div>
-
-										<div class="bottom">
-											<a href="/" class="link">Читать далее</a>
-
-											<div class="views">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
-
-												<span>32.2k</span>
-											</div>
+											<span>97.3k</span>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="pagination">
-								<a href="/" class="prev">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb2.jpg 1x, images/tmp/article_thumb2@2x.jpg 2x">
+
+										<img src="images/tmp/article_thumb2.jpg" alt="" loading="lazy" class="cover">
+									</picture>
 								</a>
 
-								<a class="active">1</a>
+								<div class="info">
+									<div class="category blue">Безопасность</div>
 
-								<a href="/">2</a>
+									<div class="name">
+										<a href="/">Безопасность данных в облаке</a>
+									</div>
 
-								<a href="/">3</a>
+									<div class="desc">Как мы защищаем информацию наших клиентов: шифрование, протоколы доступа и...</div>
 
-								<a href="/">4</a>
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
 
-								<a href="/">5</a>
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
 
-								<a href="/" class="next">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
-								</a>
+											<span>87.1k</span>
+										</div>
+									</div>
+								</div>
 							</div>
+
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb3.jpg 1x, images/tmp/article_thumb3@2x.jpg 2x">
+
+										<img src="images/tmp/article_thumb3.jpg" alt="" loading="lazy" class="cover">
+									</picture>
+								</a>
+
+								<div class="info">
+									<div class="category purple">Кейсы</div>
+
+									<div class="name">
+										<a href="/">Снижение издержек на фулфилмент</a>
+									</div>
+
+									<div class="desc">Реальные цифры: как автоматизация сборки заказов помогла сократить операционные....</div>
+
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
+
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
+
+											<span>32.2k</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb1.jpg 1x, images/tmp/article_thumb1@2x.jpg 2x">
+
+										<img src="images/tmp/article_thumb1.jpg" alt="" loading="lazy" class="cover">
+									</picture>
+								</a>
+
+								<div class="info">
+									<div class="category purple">Кейсы</div>
+
+									<div class="name">
+										<a href="/">Как внедрить WMS за 30 дней</a>
+									</div>
+
+									<div class="desc">Пошаговое руководство по быстрому развертыванию облачной системы управле...</div>
+
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
+
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
+
+											<span>97.3k</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb2.jpg 1x, images/tmp/article_thumb2@2x.jpg 2x">
+
+										<img src="images/tmp/article_thumb2.jpg" alt="" loading="lazy" class="cover">
+									</picture>
+								</a>
+
+								<div class="info">
+									<div class="category blue">Безопасность</div>
+
+									<div class="name">
+										<a href="/">Безопасность данных в облаке</a>
+									</div>
+
+									<div class="desc">Как мы защищаем информацию наших клиентов: шифрование, протоколы доступа и...</div>
+
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
+
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
+
+											<span>87.1k</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<a href="/" class="image">
+									<picture class="thumb">
+										<source srcset="images/tmp/article_thumb3.jpg 1x, images/tmp/article_thumb3@2x.jpg 2x">
+
+										<img src="images/tmp/article_thumb3.jpg" alt="" loading="lazy" class="cover">
+									</picture>
+								</a>
+
+								<div class="info">
+									<div class="category purple">Кейсы</div>
+
+									<div class="name">
+										<a href="/">Снижение издержек на фулфилмент</a>
+									</div>
+
+									<div class="desc">Реальные цифры: как автоматизация сборки заказов помогла сократить операционные....</div>
+
+									<div class="bottom">
+										<a href="/" class="link">Читать далее</a>
+
+										<div class="views">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
+
+											<span>32.2k</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="pagination">
+							<a href="/" class="prev">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
+							</a>
+
+							<a class="active">1</a>
+
+							<a href="/">2</a>
+
+							<a href="/">3</a>
+
+							<a href="/">4</a>
+
+							<a href="/">5</a>
+
+							<a href="/" class="next">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_long_hor"></use></svg>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -384,6 +469,8 @@
 				<div class="cont">
 					<div class="data">
 						<picture class="image">
+							<source srcset="images/footer_img_mob.svg" media="(max-width: 767px)">
+
 							<img src="images/footer_img.svg" alt="" loading="lazy">
 						</picture>
 
@@ -460,7 +547,7 @@
 
 							<div class="contacts">
 								<div class="item">
-									<div class="labe">Телефон</div>
+									<div class="label">Телефон</div>
 
 									<div class="val">
 										<div><a href="tel:8 800 000-00-00">8 800 000-00-00</a></div>
@@ -468,7 +555,7 @@
 								</div>
 
 								<div class="item">
-									<div class="labe">Почта</div>
+									<div class="label">Почта</div>
 
 									<div class="val">
 										<div><a href="mailto:support@vormwms.com">support@vormwms.com</a></div>

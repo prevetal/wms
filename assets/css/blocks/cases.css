@@ -21,7 +21,7 @@
         }
 
 
-        .tabs
+        .categories
         {
             display: flex;
             align-content: stretch;
@@ -35,29 +35,32 @@
             {
                 position: relative;
 
-                display: block;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
 
                 height: 42px;
                 padding-inline: var(--inner_gap_xl);
 
                 transition: .2s linear;
+                text-decoration: none;
 
-                border: 1px solid transparent;
+                color: currentColor;
                 border-radius: var(--border_radius_xs);
                 background: var(--bg_grey);
 
 
                 &:hover
                 {
-                    color: var(--primary_color);
-                    border-color: var(--primary_color);
+                    background: #efeff5;
                 }
 
 
                 &.active
                 {
                     color: var(--light_color);
-                    border-color: var(--primary_color);
                     background: var(--gradient_primary);
                 }
             }
@@ -279,7 +282,7 @@
             margin-top: var(--inner_gap_xl);
             padding-inline: var(--inner_gap_xl);
 
-            transition: .2s linear;
+            transition: color .2s linear;
             text-align: center;
 
             color: var(--primary_color);
@@ -292,9 +295,138 @@
         {
             .btn
             {
-                color: var(--light_color);
-                background: var(--primary_color);
+                color: var(--primary_color_h);
             }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .cases
+    {
+        .head
+        {
+            .categories
+            {
+                .btn
+                {
+                    height: 40px;
+                    padding-inline: var(--inner_gap);
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --gap_x: var(--inner_gap_l);
+            --gap_y: var(--inner_gap_l);
+        }
+
+
+        .case
+        {
+            .row
+            {
+                margin-bottom: var(--inner_gap_xxs);
+            }
+
+
+            .result
+            {
+                gap: 4px;
+
+                height: 30px;
+                padding-inline: var(--inner_gap_xxxs);
+            }
+
+
+            .btn
+            {
+                min-width: 128px;
+                height: 40px;
+                margin-top: var(--inner_gap_l);
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .cases
+    {
+        .head
+        {
+            gap: var(--inner_gap);
+
+
+            .categories
+            {
+                display: grid;
+                overflow: auto;
+
+                width: calc(100% + var(--cont_padding_double));
+                margin-block: 0;
+                margin-inline: calc(var(--cont_padding) * -1);
+                padding-inline: var(--cont_padding);
+
+                grid-auto-flow: column;
+                grid-auto-columns: max-content;
+                scroll-padding: 0 var(--cont_padding);
+                scroll-snap-type: x mandatory;
+                scrollbar-color: transparent transparent;
+                scrollbar-width: thin;
+
+
+                &::-webkit-scrollbar
+                {
+                    display: none;
+
+                    width: 0;
+                    height: 0;
+
+                    background-color: transparent;
+                }
+
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background-color: transparent;
+                }
+
+
+                .btn
+                {
+                    scroll-snap-align: start;
+                }
+            }
+        }
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .cases
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
         }
     }
 }

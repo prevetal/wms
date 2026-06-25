@@ -13,8 +13,8 @@
         position: relative;
 
         display: flex;
-        align-content: center;
-        align-items: center;
+        align-content: flex-start;
+        align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: var(--inner_gap_xl);
@@ -40,6 +40,7 @@
     .data
     {
         display: flex;
+        align-self: center;
         flex-direction: column;
         justify-content: space-between;
         gap: var(--block_padding);
@@ -107,6 +108,118 @@
 
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .case_info
+    {
+        padding-bottom: var(--block_padding_l);
+
+
+        .cont
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .image
+        {
+            width: 360px;
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap_l);
+
+            width: calc(100% - 360px - var(--inner_gap_l));
+            min-height: 282px;
+
+
+            .title
+            {
+                font-size: var(--font_size_title);
+            }
+
+
+            .desc
+            {
+                width: 100%;
+
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .bg
+        {
+            top: -160px;
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .case_info
+    {
+        .image
+        {
+            width: 100%;
+        }
+
+
+        .data
+        {
+            gap: var(--inner_gap);
+
+            width: 100%;
+            min-height: 0;
+        }
+
+
+        .bg
+        {
+            width: 1000px;
+            height: 494px;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .case_info
+    {
+        .image
+        {
+            height: 300px;
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_s);
+        }
+
+
+        .bg
+        {
+            top: -120px;
+            right: 0;
+
+            width: 612px;
+            height: 300px;
+            margin-right: 0;
         }
     }
 }

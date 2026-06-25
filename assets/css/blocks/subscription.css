@@ -130,7 +130,7 @@
 
     .data
     {
-        width: calc(100% - 440PX - var(--block_padding_s));
+        width: calc(100% - 440px - var(--block_padding_s));
         padding-block: var(--block_padding);
         padding-inline: var(--block_padding_s);
 
@@ -220,6 +220,241 @@
                 color: var(--green_color);
 
                 aspect-ratio: 1 / 1;
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .subscription
+    {
+        .block_head
+        {
+            .desc
+            {
+                gap: var(--inner_gap_s);
+
+                width: 504px;
+            }
+        }
+
+
+        .grid
+        {
+            gap: var(--inner_gap_l);
+        }
+
+
+        .info
+        {
+            width: 360px;
+            min-height: 480px;
+            padding-block: var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l);
+
+
+            .thumb
+            {
+                padding-inline: var(--inner_gap_l);
+                padding-bottom: var(--inner_gap_l);
+            }
+        }
+
+
+        .data
+        {
+            width: calc(100% - 360px - var(--inner_gap_l));
+            padding-block: var(--inner_gap_l);
+            padding-inline: var(--inner_gap_l);
+
+
+            .grid_row
+            {
+                --gap_x: var(--inner_gap_xxxs);
+                --gap_y: var(--inner_gap_xxxs);
+            }
+
+
+            .titles
+            {
+                padding-bottom: var(--inner_gap_s);
+            }
+
+
+            .item
+            {
+                .col
+                {
+                    gap: var(--inner_gap_xxxs);
+
+                    min-height: 68px;
+                    padding: var(--inner_gap_s);
+                }
+
+
+                .checkbox
+                {
+                    left: var(--inner_gap_s);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .subscription
+    {
+        .block_head
+        {
+            .title,
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .info
+        {
+            justify-content: center;
+
+            width: 100%;
+            min-height: 280px;
+
+            aspect-ratio: auto;
+
+
+            .desc
+            {
+                width: 272px;
+                max-width: 100%;
+            }
+
+
+            .thumb
+            {
+                right: 0;
+                left: auto;
+
+                width: 335px;
+                padding: var(--inner_gap_l);
+            }
+        }
+
+
+        .data
+        {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .subscription
+    {
+        .grid
+        {
+            gap: var(--inner_gap_xs);
+        }
+
+
+        .info
+        {
+            justify-content: flex-start;
+
+            width: calc(100% + var(--cont_padding_double));
+            max-width: none;
+            min-height: 0;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--cont_padding);
+            padding-bottom: 300px;
+
+
+            .desc
+            {
+                width: 100%;
+            }
+
+
+            .thumb
+            {
+                right: 0;
+                left: 0;
+
+                margin-inline: auto;
+            }
+        }
+
+
+        .data
+        {
+            width: calc(100% + var(--cont_padding_double));
+            max-width: none;
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-inline: var(--inner_gap_xxxs);
+
+
+            .titles
+            {
+                font-size: var(--font_size);
+
+
+                .title
+                {
+                    padding-inline: var(--inner_gap_xxxs);
+                }
+            }
+
+
+            .item
+            {
+                font-size: var(--font_size_s);
+
+
+                .col
+                {
+                    min-height: 44px;
+                    padding-block: var(--inner_gap_xxxs);
+                    padding-inline: var(--inner_gap_xxxs);
+                }
+
+
+                .icon
+                {
+                    display: none;
+
+
+                    & + span
+                    {
+                        width: 100%;
+                    }
+                }
+
+
+                .checkbox
+                {
+                    left: var(--inner_gap_xxxs);
+
+                    width: 12px;
+
+
+                    & + span
+                    {
+                        width: 100%;
+                        padding-left: var(--inner_gap_s);
+                    }
+                }
             }
         }
     }

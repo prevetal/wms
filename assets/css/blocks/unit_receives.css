@@ -131,9 +131,151 @@
             height: 54px;
             padding-inline: var(--inner_gap_xl);
 
+            transition: background .2s linear;
+
             color: var(--light_color);
             border-radius: var(--border_radius_xs);
             background: var(--primary_color);
+
+
+            &:hover
+            {
+                background: var(--primary_color_h);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .unit_receives
+    {
+        .grid_row
+        {
+            --gap_x: var(--inner_gap_l);
+            --gap_y: var(--inner_gap_l);
+        }
+
+
+        .item
+        {
+            min-height: 0;
+            padding: var(--inner_gap_l);
+
+
+            .desc
+            {
+                padding-top: 0;
+            }
+        }
+
+
+        .bottom
+        {
+            margin-top: var(--inner_gap_l);
+            padding: var(--inner_gap_l);
+
+
+            .managers
+            {
+                .photo
+                {
+                    width: 48px;
+                }
+
+
+                .photo + .photo
+                {
+                    margin-left: calc(var(--inner_gap_xxs) * -1);
+                }
+            }
+
+
+            .btn
+            {
+                height: 48px;
+                padding-inline: var(--inner_gap_l);
+            }
+        }
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .unit_receives
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+
+
+        .bottom
+        {
+            margin-top: var(--inner_gap_l);
+            padding: var(--inner_gap_l);
+
+
+            .managers
+            {
+                span
+                {
+                    width: 192px;
+                    margin-left: var(--inner_gap_xs);
+
+                    font-size: var(--font_size_s);
+                }
+
+
+                .photo + .photo
+                {
+                    margin-left: calc(var(--inner_gap_xs) * -1);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px)
+{
+    .unit_receives
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_y: var(--inner_gap_xs);
+        }
+
+
+        .bottom
+        {
+            margin-top: var(--inner_gap_xs);
+
+
+            .managers
+            {
+                span
+                {
+                    width: 100%;
+                    margin-top: var(--inner_gap_xxs);
+                    margin-left: 0;
+                }
+            }
+
+
+            .btn
+            {
+                width: 100%;
+                margin-top: var(--inner_gap);
+            }
         }
     }
 }
