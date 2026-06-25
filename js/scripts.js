@@ -58,16 +58,13 @@ if (selects) {
 }
 
 
-// Mob. menu
-$('header .mob_menu_btn').click((e) => {
-	e.preventDefault()
-
-	$('header .mob_menu_btn').toggleClass('active')
-	$('body').toggleClass('lock')
-	$('.mob_menu').toggleClass('show')
+// Popover
+document.querySelectorAll('[popover]').forEach(el => {
+	el.addEventListener('toggle', e => document.querySelector(`[popovertarget="${el.id}"]`)?.classList.toggle('active', e.newState === 'open'))
 })
 
 
+// Mob. menu
 $('.mob_menu .menu .item  > a.sub_link').click(function(e) {
 	e.preventDefault()
 
