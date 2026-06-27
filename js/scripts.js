@@ -84,6 +84,28 @@ document.querySelector('#get_demo_modal .inner').addEventListener('click', e => 
 })
 
 
+// Video modals
+const videoModal = document.getElementById('video_modal'),
+	video = videoModal.querySelector('video')
+
+document.querySelectorAll('.video_link').forEach(trigger => {
+    trigger.addEventListener('click', e => {
+        e.preventDefault()
+
+        video.src = trigger.href
+        videoModal.showPopover()
+        video.play()
+    })
+})
+
+videoModal.addEventListener('toggle', e => {
+    if (e.newState === 'closed') {
+        video.pause()
+        video.src = ''
+    }
+})
+
+
 // Custom submit
 $('.form').submit(function(e) {
 	e.preventDefault()

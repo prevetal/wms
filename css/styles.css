@@ -2844,6 +2844,24 @@ footer
         }
 
 
+        .video_modal &
+        {
+            width: fit-content;
+            padding: 0;
+
+            border-radius: 0;
+
+
+            video
+            {
+                display: block;
+
+                max-width: 100%;
+                max-height: calc(100svh - var(--block_padding) * 2);
+            }
+        }
+
+
         .close_btn
         {
             position: absolute;
