@@ -257,7 +257,15 @@
             & > *,
             .btn
             {
+                order: 2;
+
                 width: 100%;
+
+
+                &:last-child
+                {
+                    order: 1;
+                }
             }
         }
 
@@ -277,8 +285,8 @@
     {
         .data
         {
-            margin-inline: calc(var(--cont_padding) * -1);
-            padding-inline: var(--cont_padding);
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+            padding-inline: calc(var(--cont_padding) - 5px);
         }
 
 

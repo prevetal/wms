@@ -232,7 +232,9 @@
     {
         .cont
         {
-            gap: var(--inner_gap_l);
+            gap: var(--inner_gap_xs);
+
+            padding-inline: 5px;
         }
 
 
@@ -246,6 +248,11 @@
         {
             width: 100%;
             min-height: 0;
+            padding-block: var(--block_padding_l);
+            padding-inline: calc(var(--cont_padding) - 5px);
+
+            border-radius: var(--border_radius_l);
+            background: var(--bg_grey);
 
 
             .desc

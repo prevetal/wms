@@ -302,9 +302,11 @@
 
         .data
         {
-            width: 100%;
+            width: calc(100% + (var(--cont_padding) - 5px) * 2);
             min-height: 0;
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
             margin-top: var(--block_padding_l);
+            padding-inline: calc(var(--cont_padding) - 5px);
             padding-bottom: 220px;
 
 

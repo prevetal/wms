@@ -373,11 +373,11 @@
         {
             justify-content: flex-start;
 
-            width: calc(100% + var(--cont_padding_double));
+            width: calc(100% + (var(--cont_padding) - 5px) * 2);
             max-width: none;
             min-height: 0;
-            margin-inline: calc(var(--cont_padding) * -1);
-            padding-inline: var(--cont_padding);
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+            padding-inline: calc(var(--cont_padding) - 5px);
             padding-bottom: 300px;
 
 
@@ -399,10 +399,10 @@
 
         .data
         {
-            width: calc(100% + var(--cont_padding_double));
+            width: calc(100% + (var(--cont_padding) - 5px) * 2);
             max-width: none;
-            margin-inline: calc(var(--cont_padding) * -1);
-            padding-inline: var(--inner_gap_xxxs);
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+            padding-inline: 5px;
 
 
             .titles

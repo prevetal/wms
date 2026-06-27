@@ -188,8 +188,33 @@
     {
         .grid_row
         {
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+
             --items_per_line: 1;
+            --gap_x: var(--zero_px);
             --gap_y: var(--inner_gap_xs);
+        }
+
+
+        .item
+        {
+            min-height: 360px;
+            padding-inline: calc(var(--cont_padding) - 5px);
+
+
+            .desc
+            {
+                br
+                {
+                    display: none;
+                }
+            }
+
+
+            .thumb
+            {
+                padding-inline: calc(var(--cont_padding) - 5px);
+            }
         }
     }
 }

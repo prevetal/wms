@@ -16,6 +16,9 @@
 
     .info
     {
+        position: sticky;
+        top: 100px;
+
         display: flex;
         flex-direction: column;
         gap: var(--inner_gap);
@@ -366,6 +369,7 @@
         .info
         {
             position: relative;
+            top: 0;
 
             gap: 0;
 
@@ -501,6 +505,12 @@
     {
         .info
         {
+            .pre_title
+            {
+                display: none;
+            }
+
+
             .features
             {
                 .items

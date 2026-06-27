@@ -452,7 +452,13 @@
 
             .desc
             {
-                font-size: var(--font_size_s);
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+
+                text-overflow: ellipsis;
+
+                -webkit-line-clamp: 3;
             }
         }
     }

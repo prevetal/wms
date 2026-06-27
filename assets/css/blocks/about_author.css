@@ -277,11 +277,5 @@
                 }
             }
         }
-
-
-        .desc
-        {
-            font-size: var(--font_size_s);
-        }
     }
 }

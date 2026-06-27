@@ -94,6 +94,7 @@
         {
             display: block;
 
+            border-radius: var(--border_radius);
             background: var(--bg_grey);
 
             aspect-ratio: 1 / .595;

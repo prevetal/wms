@@ -355,5 +355,30 @@
         {
             --items_per_line: 1;
         }
+
+
+        .service
+        {
+            &.primary
+            {
+                min-height: 400px;
+
+
+                .btn
+                {
+                    margin-top: 0;
+                }
+
+
+                .thumb
+                {
+                    .l_w &
+                    {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
     }
 }

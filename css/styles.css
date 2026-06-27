@@ -1107,19 +1107,27 @@ aside
     z-index: 3;
 
 
+    .sticky
+    {
+        position: sticky;
+        top: 100px;
+
+
+        &:not(.block)
+        {
+            display: flex;
+            flex-direction: column;
+            gap: var(--inner_gap_xl);
+        }
+    }
+
+
     .block
     {
         padding: var(--block_padding_s);
 
         border-radius: var(--border_radius);
         background: var(--bg_grey);
-
-
-        &.sticky
-        {
-            position: sticky;
-            top: 100px;
-        }
 
 
         .title
@@ -2012,6 +2020,12 @@ aside
 
         border-radius: var(--border_radius);
         background: var(--bg_grey);
+
+
+        .aligncenter
+        {
+            text-align: center;
+        }
 
 
         .titles
@@ -3054,6 +3068,25 @@ footer
 
 
 
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        gap: var(--inner_gap_l);
+
+
+        .sticky
+        {
+            &:not(.block)
+            {
+                gap: var(--inner_gap_l);
+            }
+        }
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -3393,6 +3426,18 @@ footer
     }
 
 
+    .block
+    {
+        &.grid
+        {
+            .cont.row
+            {
+                gap: 60px;
+            }
+        }
+    }
+
+
 
     /*------------
         Header
@@ -3541,7 +3586,7 @@ footer
     {
         --cont_padding: 20px;
         --font_size_title_l: 32px;
-        --font_size_title: 28px;
+        --font_size_title: 32px;
         --font_size_title_s: 24px;
         --block_head_offset_l: 40px;
         --block_head_offset: 32px;
@@ -3606,6 +3651,27 @@ footer
     ----------------*/
     .block_head
     {
+        &.centered
+        {
+            align-content: flex-start;
+            align-items: flex-start;
+
+            text-align: left;
+        }
+
+
+        .title
+        {
+            line-height: 105%;
+
+
+            br
+            {
+                display: none;
+            }
+        }
+
+
         .desc
         {
             font-size: var(--font_size_s);
@@ -3658,6 +3724,9 @@ footer
     ----------------*/
     .text_block
     {
+        font-weight: 400;
+
+
         .video_link
         {
             .thumb
@@ -3775,6 +3844,14 @@ footer
         .block_head
         {
             width: 100%;
+
+
+            .desc
+            {
+                width: 100%;
+
+                font-size: var(--font_size);
+            }
         }
 
 
@@ -3875,10 +3952,10 @@ footer
 
         .data
         {
-            width: calc(100% + var(--cont_padding_double));
-            margin-inline: calc(var(--cont_padding) * -1);
+            width: calc(100% + (var(--cont_padding) - 5px) * 2);
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
             padding-block: var(--inner_gap_xl);
-            padding-inline: var(--cont_padding);
+            padding-inline: calc(var(--cont_padding) - 5px);
 
 
             .image

@@ -200,9 +200,27 @@
 {
     .case_info
     {
+        .cont
+        {
+            gap: var(--inner_gap_xs);
+
+            padding-inline: 5px;
+        }
+
+
         .image
         {
             height: 300px;
+        }
+
+
+        .data
+        {
+            padding-block: var(--block_padding_l);
+            padding-inline: calc(var(--cont_padding) - 5px);
+
+            border-radius: var(--border_radius_l);
+            background: var(--bg_grey);
         }
 
 

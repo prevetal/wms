@@ -394,11 +394,22 @@
         .cont
         {
             gap: var(--inner_gap_xs);
+
+            padding-inline: 5px;
         }
 
 
         .data
         {
+            padding-inline: calc(var(--cont_padding) - 5px);
+
+
+            .title
+            {
+                font-size: var(--font_size_title_l);
+            }
+
+
             .desc
             {
                 font-size: var(--font_size_s);
@@ -409,7 +420,15 @@
             {
                 & > *
                 {
+                    order: 2;
+
                     width: 100%;
+
+
+                    &:last-child
+                    {
+                        order: 1;
+                    }
                 }
             }
 

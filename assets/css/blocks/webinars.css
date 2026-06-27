@@ -666,12 +666,22 @@
     {
         .grid_row
         {
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+
             --items_per_line: 1;
+            --gap_x: var(--zero_px);
+            --gap_y: var(--inner_gap_xs);
         }
 
 
         .item
         {
+            .info
+            {
+                padding-inline: calc(var(--cont_padding) - 5px);
+            }
+
+
             .small &
             {
                 .image
@@ -712,6 +722,7 @@
         .subscribe
         {
             min-height: 0;
+            padding-inline: calc(var(--cont_padding) - 5px);
             padding-top: 66%;
 
             --width_multiplier: 1;

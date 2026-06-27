@@ -18,6 +18,14 @@
         width: 176px;
         max-width: 100%;
         margin-bottom: 0;
+
+
+        .title
+        {
+            font-size: var(--font_size);
+
+            text-align: center;
+        }
     }
 
 

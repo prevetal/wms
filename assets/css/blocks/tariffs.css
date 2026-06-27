@@ -581,7 +581,10 @@
 
         .grid_row
         {
+            margin-inline: calc((var(--cont_padding) - 5px) * -1);
+
             --items_per_line: 1;
+            --gap_x: var(--zero_px);
             --gap_y: var(--inner_gap_xs);
         }
 
@@ -589,6 +592,8 @@
         .item
         {
             gap: var(--inner_gap);
+
+            padding-inline: calc(var(--cont_padding) - 5px);
 
 
             &.primary
@@ -613,6 +618,12 @@
                 .val
                 {
                     font-size: 52px;
+                }
+
+
+                .desc
+                {
+                    width: 100%;
                 }
             }
 
