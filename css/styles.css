@@ -1390,7 +1390,8 @@ aside
     --form_border_color: #e1e3ea;
     --form_border_color_focus: var(--grey_color);
     --form_border_radius: var(--border_radius_xs);
-    --form_error_color: red;
+    --form_success_color: #88d89d;
+    --form_error_color: #e99596;
     --form_bg_color: var(--bg_grey);
     --form_placeholder_color: var(--grey_color);
     --form_columns_gap: var(--inner_gap_l);
@@ -1492,8 +1493,16 @@ aside
         }
 
 
+        &.success
+        {
+            border-color: var(--form_success_color);
+        }
+
+
         &.error
         {
+            padding-right: 43px;
+
             border-color: var(--form_error_color);
         }
     }
@@ -1534,8 +1543,16 @@ aside
         }
 
 
+        &.success
+        {
+            border-color: var(--form_success_color);
+        }
+
+
         &.error
         {
+            padding-right: 43px;
+
             border-color: var(--form_error_color);
         }
     }
@@ -1555,8 +1572,8 @@ aside
 
             display: block;
 
-            width: 6px;
-            height: 4px;
+            width: 8px;
+            height: 6px;
             margin-block: auto;
 
             transition: transform .2s linear;
@@ -1714,13 +1731,66 @@ aside
     }
 
 
-    .error_text
+    .error_icon
     {
-        margin-top: 4px;
+        position: absolute;
+        top: 0;
+        right: var(--inner_gap_xxxs);
+        bottom: 0;
 
-        font-size: var(--font_size_s);
+        display: block;
+
+        width: 24px;
+        margin-block: auto;
+        padding: 5px;
+
+        z-index: 3;
 
         color: var(--form_error_color);
+
+        aspect-ratio: 1 / 1;
+
+
+        &:hover ~ .error_text
+        {
+            display: block;
+
+            opacity: 1;
+
+
+            @starting-style
+            {
+                display: none;
+
+                opacity: 0;
+            }
+        }
+    }
+
+
+    .error_text
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        display: block;
+
+        margin-top: 5px;
+        padding-block: 5px;
+        padding-inline: var(--inner_gap_s);
+
+        font-size: var(--font_size_xs);
+
+        z-index: 9;
+        transition: opacity .2s linear, display .2s allow-discrete;
+        white-space: nowrap;
+        pointer-events: none;
+
+        opacity: 0;
+        color: var(--light_color);
+        border-radius: var(--border_radius_max);
+        background: var(--form_error_color);
     }
 
 
@@ -2696,6 +2766,192 @@ footer
 
 
 
+/*-----------
+    PopUp
+-----------*/
+.modal
+{
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+    transition: opacity .2s linear, display .2s allow-discrete;
+    pointer-events: none;
+
+    opacity: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+
+
+    .wrapper
+    {
+        position: absolute;
+
+        display: flex;
+        overflow-x: clip;
+        overflow-y: auto;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+        padding-block: var(--outside_gap_s) var(--block_padding);
+        padding-inline: var(--inner_gap);
+
+        pointer-events: auto;
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    .inner
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--inner_gap_xs);
+
+        width: 420px;
+        max-width: 100%;
+        margin: auto;
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding_s);
+
+        z-index: 3;
+
+        border-radius: var(--border_radius);
+        background: var(--bg_grey);
+
+
+        .primary &
+        {
+            color: var(--light_color);
+            background: var(--gradient_primary);
+        }
+
+
+        .close_btn
+        {
+            position: absolute;
+            top: var(--inner_gap_l);
+            right: var(--inner_gap_l);
+
+            width: 24px;
+            padding: 5px;
+
+            z-index: 3;
+            transition: color .2s linear;
+
+            color: var(--grey_color);
+
+
+            .icon
+            {
+                display: block;
+
+                width: 100%;
+
+                aspect-ratio: 1 / 1;
+            }
+
+
+            &:hover
+            {
+                color: var(--dark_color);
+            }
+
+
+            .primary &
+            {
+                color: var(--light_color);
+
+
+                :hover
+                {
+                    color: var(--light_color_soft);
+                }
+            }
+        }
+    }
+
+
+    .title
+    {
+        font-size: var(--font_size_title_s);
+        font-weight: 700;
+
+        text-align: center;
+    }
+
+
+    .desc
+    {
+        text-align: center;
+
+        color: var(--grey_color);
+
+
+        .primary &
+        {
+            color: var(--light_color);
+        }
+    }
+
+
+    .form
+    {
+        margin-top: var(--inner_gap_xs);
+
+        --form_border_color: var(--light_color);
+        --form_border_color_focus: var(--light_color);
+        --form_bg_color: var(--light_color);
+        --form_columns_gap: var(--inner_gap_xs);
+        --form_line_gap: var(--inner_gap_xs);
+        --form_input_height: 50px;
+        --form_textarea_height: 100px;
+    }
+
+
+    .btn
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 100%;
+        height: 50px;
+        margin-top: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_xl);
+
+        border-radius: var(--border_radius_xs);
+        background: var(--light_color);
+    }
+
+
+    &::backdrop
+    {
+        opacity: .8;
+        background: var(--dark_color);
+    }
+
+
+    &:popover-open
+    {
+        opacity: 1;
+
+
+        @starting-style
+        {
+            opacity: 0;
+        }
+    }
+}
+
+
+
 @media print,
 (max-width: 1279px)
 {
@@ -3083,6 +3339,28 @@ footer
                     height: 470px;
                 }
             }
+        }
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        .inner
+        {
+            width: 400px;
+            padding-block: var(--block_padding_l);
+            padding-inline: var(--block_padding);
+        }
+
+
+        .form
+        {
+            --form_input_height: 48px;
+            --form_textarea_height: 96px;
         }
     }
 }
@@ -3640,6 +3918,32 @@ footer
                     height: auto;
                 }
             }
+        }
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        .inner
+        {
+            padding-inline: var(--inner_gap_l);
+
+
+            .close_btn
+            {
+                top: var(--inner_gap);
+                right: var(--inner_gap);
+            }
+        }
+
+
+        .desc
+        {
+            font-size: var(--font_size_s);
         }
     }
 }

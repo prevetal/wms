@@ -26,6 +26,9 @@
     <path d="M5.5 16L16.1066 5.3934" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     <path d="M5.5 5L16.1066 15.6066" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="ic_close2">
+    <path d="M0.000111557 11.3138L5.65697 5.65695C5.5161 5.79781 4.49532 5.65055 4.04072 5.65695C3.59253 5.65695 3.62317 5.2394 3.2326 4.84883L0.000111557 1.61634L1.61636 9.94381e-05L6.46509 4.84883L11.3138 9.94381e-05L12.9301 1.61634L7.27321 7.2732C7.41407 7.13234 8.44126 7.2732 8.88945 7.2732C9.34405 7.2668 9.30701 7.69075 9.69758 8.08132L12.9301 11.3138L11.3138 12.9301L6.46509 8.08132L1.61636 12.9301L0.000111557 11.3138Z" fill="currentColor"></path>
+  </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ic_date">
     <circle cx="12" cy="12.0002" r="8" stroke="currentColor" stroke-width="1.2"></circle>
     <path d="M12 8.80029V11.7327C12 11.8999 12.0836 12.056 12.2226 12.1487L14.4 13.6003" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>

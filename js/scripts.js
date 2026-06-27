@@ -39,6 +39,12 @@ if (is_touch_device()) {
 }
 
 
+// Phone input mask
+new Maska.MaskInput('input[type=tel]', {
+	mask: '+7 (###) ###-##-##'
+})
+
+
 // Custom select - Nice select
 const selects = document.querySelectorAll('select:not(.skip)'),
 	selectsInstances = []
@@ -62,6 +68,26 @@ if (selects) {
 document.querySelectorAll('[popover]').forEach(el => {
 	el.addEventListener('toggle', e => document.querySelector(`[popovertarget="${el.id}"]`)?.classList.toggle('active', e.newState === 'open'))
 })
+
+
+document.querySelectorAll('.modal .container').forEach(wrapper => {
+	wrapper.addEventListener('click', e => {
+		if (e.target === wrapper) {
+			wrapper.closest('[popover]').hidePopover()
+		}
+	})
+})
+
+
+// Custom submit
+$('.form').submit(function(e) {
+	e.preventDefault()
+
+    document.querySelectorAll('[popover]:popover-open').forEach(p => p.hidePopover())
+
+	document.getElementById('success_modal').showPopover()
+})
+
 
 
 // Mob. menu

@@ -167,8 +167,6 @@
             padding-inline: var(--inner_gap_xl);
 
             transition: color .2s linear;
-            text-align: center;
-            text-decoration: none;
 
             color: var(--primary_color);
             border: 1px solid var(--primary_color);
@@ -395,7 +393,7 @@
 
             &:hover
             {
-                color: var(--primary_color_h);
+                color: var(--light_color_soft);
             }
         }
 

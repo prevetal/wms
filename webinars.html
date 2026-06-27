@@ -96,7 +96,7 @@
 							</div>
 						</nav>
 
-						<button class="btn">
+						<button class="btn" popovertarget="get_demo_modal">
 							<span>Демо-версия</span>
 
 							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_diagonal"></use></svg>
@@ -251,7 +251,7 @@
 
 									<div class="desc">Спикер: Иван Иванов, тех. директор Cloud WMS</div>
 
-									<a href="/" class="btn">Зарегистрироваться</a>
+									<button class="btn" popovertarget="register_webinar_modal">Зарегистрироваться</button>
 								</div>
 							</div>
 
@@ -277,7 +277,7 @@
 
 									<div class="desc">Спикер: Иван Иванов, тех. директор Cloud WMS</div>
 
-									<a href="/" class="btn">Зарегистрироваться</a>
+									<button class="btn" popovertarget="register_webinar_modal">Зарегистрироваться</button>
 								</div>
 							</div>
 
@@ -451,9 +451,9 @@
 						</div>
 
 						<div class="btns">
-							<button class="btn fill">Попробовать бесплатно</button>
+							<button class="btn fill" popovertarget="get_demo_modal">Попробовать бесплатно</button>
 
-							<button class="btn">
+							<button class="btn" popovertarget="get_offer_modal">
 								<span>Запросить КП</span>
 
 								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -573,13 +573,241 @@
 		</div>
 
 
+		<section class="modal" id="get_demo_modal" popover>
+			<div class="wrapper">
+				<div class="inner">
+					<button type="button" class="close_btn" popovertarget="get_demo_modal" popovertargetaction="hide">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+					</button>
+
+					<div class="title">Запросить<br> демонстрацию Vorm WMS</div>
+
+					<div class="desc">Покажем, как система работает на практике, ответим на вопросы и подберем решение</div>
+
+					<form action="" class="form">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input success" placeholder="Ваше ФИО">
+							</div>
+						</div>
+
+						<div class="columns">
+							<div class="line">
+								<div class="field">
+									<input type="text" name="" value="" class="input error" placeholder="ИНН компании">
+
+									<svg class="error_icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+
+									<div class="error_text">Введите полное ИНН компании</div>
+								</div>
+							</div>
+
+							<div class="line">
+								<div class="field">
+									<input type="email" name="" value="" class="input" placeholder="Email">
+								</div>
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="+7 (___) ___-__-__">
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Запросить демо</button>
+						</div>
+
+						<div class="agree">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="backdrop" popovertarget="get_demo_modal" popovertargetaction="hide"></div>
+		</section>
+
+
+		<section class="modal" id="contact_modal" popover>
+			<div class="wrapper">
+				<div class="inner">
+					<button type="button" class="close_btn" popovertarget="contact_modal" popovertargetaction="hide">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+					</button>
+
+					<div class="title">Свяжитесь с нами</div>
+
+					<div class="desc">Наш специалист ответит на ваши вопросы и предложит оптимальное решение</div>
+
+					<form action="" class="form">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Ваше ФИО">
+							</div>
+						</div>
+
+						<div class="columns">
+							<div class="line">
+								<div class="field">
+									<input type="text" name="" value="" class="input" placeholder="ИНН компании">
+								</div>
+							</div>
+
+							<div class="line">
+								<div class="field">
+									<input type="email" name="" value="" class="input" placeholder="Email">
+								</div>
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="+7 (___) ___-__-__">
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Отправить заявку</button>
+						</div>
+
+						<div class="agree">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="backdrop" popovertarget="contact_modal" popovertargetaction="hide"></div>
+		</section>
+
+
+		<section class="modal" id="get_offer_modal" popover>
+			<div class="wrapper">
+				<div class="inner">
+					<button type="button" class="close_btn" popovertarget="get_offer_modal" popovertargetaction="hide">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+					</button>
+
+					<div class="title">Получить коммерческое предложение</div>
+
+					<div class="desc">Подготовим индивидуальное предложение с учетом особенностей вашего бизнеса</div>
+
+					<form action="" class="form">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Ваше ФИО">
+							</div>
+						</div>
+
+						<div class="columns">
+							<div class="line">
+								<div class="field">
+									<input type="text" name="" value="" class="input" placeholder="ИНН компании">
+								</div>
+							</div>
+
+							<div class="line">
+								<div class="field">
+									<input type="email" name="" value="" class="input" placeholder="Email">
+								</div>
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="+7 (___) ___-__-__">
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Получить КП</button>
+						</div>
+
+						<div class="agree">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="backdrop" popovertarget="get_offer_modal" popovertargetaction="hide"></div>
+		</section>
+
+
+		<section class="modal" id="register_webinar_modal" popover>
+			<div class="wrapper">
+				<div class="inner">
+					<button type="button" class="close_btn" popovertarget="register_webinar_modal" popovertargetaction="hide">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+					</button>
+
+					<div class="title">Регистрация на вебинар</div>
+
+					<div class="desc">Заполните форму, и мы отправим ссылку для участия и напомним о начале мероприятия</div>
+
+					<form action="" class="form">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Ваше ФИО">
+							</div>
+						</div>
+
+						<div class="columns">
+							<div class="line">
+								<div class="field">
+									<input type="text" name="" value="" class="input" placeholder="ИНН компании">
+								</div>
+							</div>
+
+							<div class="line">
+								<div class="field">
+									<input type="email" name="" value="" class="input" placeholder="Email">
+								</div>
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="+7 (___) ___-__-__">
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Получить КП</button>
+						</div>
+
+						<div class="agree">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="backdrop" popovertarget="register_webinar_modal" popovertargetaction="hide"></div>
+		</section>
+
+
+		<section class="modal primary" id="success_modal" popover>
+			<div class="wrapper">
+				<div class="inner">
+					<button type="button" class="close_btn" popovertarget="success_modal" popovertargetaction="hide">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close2"></use></svg>
+					</button>
+
+					<div class="title">Спасибо за заявку!</div>
+
+					<div class="desc">Мы получили вашу заявку. Наш специалист свяжется с вами в ближайшее время.</div>
+
+					<button class="btn" popovertarget="success_modal" popovertargetaction="hide">
+						<span class="text_gradient">Вернуться на сайт</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="backdrop" popovertarget="success_modal" popovertargetaction="hide"></div>
+		</section>
+
+
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.7.1.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/nice-select2.js"></script>
+		<script src="js/maska.min.js"></script>
 		<script src="js/scripts.js"></script>
-		<script src="js/slider-core.js"></script>
-		<script src="assets/js/blocks/signs.js"></script>
 	</body>
 </html>
