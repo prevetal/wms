@@ -2812,8 +2812,6 @@ footer
         padding-block: var(--outside_gap_s) var(--block_padding);
         padding-inline: var(--inner_gap);
 
-        pointer-events: auto;
-
         overscroll-behavior-y: contain;
     }
 
@@ -2833,6 +2831,7 @@ footer
         padding-inline: var(--block_padding_s);
 
         z-index: 3;
+        pointer-events: auto;
 
         border-radius: var(--border_radius);
         background: var(--bg_grey);

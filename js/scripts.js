@@ -79,6 +79,11 @@ document.querySelectorAll('.modal .container').forEach(wrapper => {
 })
 
 
+document.querySelector('#get_demo_modal .inner').addEventListener('click', e => {
+    e.stopPropagation()
+})
+
+
 // Custom submit
 $('.form').submit(function(e) {
 	e.preventDefault()
